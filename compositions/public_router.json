@@ -1,0 +1,23 @@
+{
+    "client": {
+        "config": {
+            "routes": [
+                "public_homepage"
+            ],
+            "customData": {
+                "clear": true
+            }
+        },
+        "flow": [
+            [
+                "public_homepage",
+                "public_homepage_layout/render"
+            ]
+        ]
+    },
+    "roles": {
+        "*": true
+    },
+    "module": "engine-ruut",
+    "name": "public_router"
+}
