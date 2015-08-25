@@ -1,0 +1,43 @@
+{
+  "dependencies": {
+    "engine": "git+ssh://git@github.com/jillix/engine.git",
+    "view": "adioo/view",
+    "login": "adioo/login",
+    "engine-ruut": "jillix/engine-ruut",
+    "engine-ruut-not-found": "jillix/engine-ruut-not-found"
+  },
+  "name": "service-admin",
+  "version": "0.1.0",
+  "author": "jillix <contact@jillix.com>",
+  "description": "Service administration tool",
+  "contributors": [
+    "Adrian Ottiker <adrian@ottiker.com>",
+    "Szabo Cristian <lcristianiim@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jillix/service-admin.git"
+  },
+  "keywords": [
+    "jillix",
+    "administration"
+  ],
+  "engine": {
+    "node": ">=0.10"
+  },
+  "homepage": "https://github.com/jillix/service-admin",
+  "main": "engine",
+  "devDependencies": {},
+  "scripts": {
+    "start": "engine .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "entrypoints": {
+      "public": {
+          "*": "public_layout"
+      },
+      "private": {
+          "*": "private_layout"
+      }
+  }
+}
