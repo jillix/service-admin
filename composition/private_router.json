@@ -22,6 +22,34 @@
             [
                 "private_homepage",
                 "private_homepage_layout/render"
+            ],
+            [
+                "tutorials",
+                "tutorials_layout/render"
+            ],
+            [
+                "support",
+                "support_layout/render"
+            ],
+            [
+                "contact",
+                "contact_layout/render"
+            ],
+            [
+                "about",
+                "about_layout/render"
+            ],
+            [
+                "blog",
+                "blog_layout/render"
+            ],
+            [
+                "terms",
+                "terms_layout/render"
+            ],
+            [
+                "privacy",
+                "privacy_layout/render"
             ]
         ]
     },
