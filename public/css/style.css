@@ -93,3 +93,10 @@ body {
     font-family: TitilliumWeb-Regular;
     color: #555;
 }
+.combobox {
+    border: solid .1em #eee;
+    background: #e1e8ee;
+    border-radius: .2em;
+    margin: 1em 0;
+    padding: 2em 4em 2em 4em;
+}
