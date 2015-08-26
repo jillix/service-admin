@@ -11,7 +11,7 @@
         "flow": [
             [
                 "public_homepage",
-                "public_homepage_layout/render"
+                "public_layout/render"
             ]
         ]
     },
