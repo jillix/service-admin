@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "Login",
+      "templates": {
+        "layout": {
+          "to": ".pages-container",
+          "html": "/public/login.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/public/login.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "login_layout"
+}
