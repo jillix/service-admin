@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "Documentation",
+      "templates": {
+        "layout": {
+          "to": ".pages-container",
+          "html": "/private/documentation.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/private/documentation.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "documentation_layout"
+}

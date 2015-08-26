@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "Terms",
+      "templates": {
+        "layout": {
+          "to": ".pages-container",
+          "html": "/private/terms.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/private/terms.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "terms_layout"
+}

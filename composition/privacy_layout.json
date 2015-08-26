@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "Privacy",
+      "templates": {
+        "layout": {
+          "to": ".pages-container",
+          "html": "/private/privacy.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/private/privacy.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "privacy_layout"
+}

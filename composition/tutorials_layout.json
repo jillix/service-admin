@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "Tutorials",
+      "templates": {
+        "layout": {
+          "to": ".pages-container",
+          "html": "/private/tutorials.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/private/tutorials.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "tutorials_layout"
+}
