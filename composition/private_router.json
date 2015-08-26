@@ -1,0 +1,33 @@
+{
+    "client": {
+        "config": {
+            "routes": [
+                "private_homepage",
+                {
+                    "documentation": "documentation",
+                    "tutorials": "tutorials",
+                    "support": "support",
+                    "contact": "contact",
+                    "about": "about",
+                    "blog": "blog",
+                    "terms": "terms",
+                    "privacy": "privacy"
+                }
+            ],
+            "customData": {
+                "clear": true
+            }
+        },
+        "flow": [
+            [
+                "private_homepage",
+                "private_layout/render"
+            ]
+        ]
+    },
+    "roles": {
+        "*": true
+    },
+    "module": "engine-ruut",
+    "name": "public_router"
+}
