@@ -1,0 +1,30 @@
+{
+  "client": {
+    "load": [
+      "public_router",
+      "ruut_not_found",
+      "footer_layout"
+    ],
+    "config": {
+      "templates": {
+        "layout": {
+          "to": "body",
+          "html": "/root/public/layout_public.html",
+          "render": true
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/root/public/layout_public.html"
+    ],
+    "styles": [
+      "/css/private.css"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "private_layout"
+}
