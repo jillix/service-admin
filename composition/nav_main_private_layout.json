@@ -1,0 +1,195 @@
+{
+  "client": {
+    "config": {
+      "templates": {
+        "layout": {
+          "to": ".main-nav",
+          "html": "/private/nav_main_private.html",
+          "render": true
+        }
+      },
+      "defaultTemplate": "layout",
+      "states": {
+        "toggleDirection": [
+          {
+            "sel": ".direction-toggle",
+            "toggle": [
+              "hide"
+            ]
+          },
+          {
+            "sel": ".direction-arrow",
+            "toggle": [
+              "hide"
+            ]
+          }
+        ],
+        "hideDirection": [
+          {
+            "sel": ".direction-toggle",
+            "add": [
+              "hide"
+            ]
+          },
+          {
+            "sel": ".direction-arrow",
+            "add": [
+              "hide"
+            ]
+          }
+        ],
+        "toggleMobileMenu": [{
+            "sel": ".first-col",
+            "toggle": ["show"]
+        },
+        {
+            "sel": ".collapsable-nav-1",
+            "toggle": ["show"]
+        },
+        {
+            "sel": ".second-col",
+            "toggle": ["show"]
+        },
+        {
+            "sel": ".collapsable-nav-2",
+            "toggle": ["show"]
+        }
+        ]
+      },
+      "domEvents": [
+        {
+          "on": "click",
+          "element": "apps",
+          "flow": "navApps"
+        },
+        {
+          "on": "click",
+          "element": "stores",
+          "flow": "navStores"
+        },
+        {
+          "on": "click",
+          "element": "domains",
+          "flow": "navDomains"
+        },
+        {
+          "on": "click",
+          "element": "settings",
+          "flow": "navUserSettings"
+        },
+        {
+          "on": "click",
+          "element": "user",
+          "flow": "navUserProfile"
+        },
+        {
+          "on": "click",
+          "element": "dropdown",
+          "flow": "toggleShortcuts"
+        },
+        {
+          "on": "click",
+          "selector": ".direction-toggle",
+          "flow": "hideShortcuts"
+        },
+        {
+          "on": "mouseleave",
+          "selector": ".direction-toggle",
+          "flow": "hideShortcuts"
+        },
+        {
+          "on": "click",
+          "element": "signout",
+          "flow": "navSignout"
+        },
+        {
+          "on": "click",
+          "element": "blog",
+          "flow": "navBlog"
+        },
+        {
+          "on": "click",
+          "element": "docs",
+          "flow": "navDocs"
+        },
+        {
+          "on": "click",
+          "element": "support",
+          "flow": "navHelp"
+        },
+        {
+            "on": "click",
+            "selector": ".menu-icon",
+            "flow": "toggleMobileMenu"
+        },
+        {
+          "on": "click",
+          "element": "jillix-logo",
+          "flow": "privateHome"
+        }
+      ]
+    },
+    "flow": [
+      [
+          "privateHome",
+          [":private_router/route", "/"]
+      ],
+      [
+          "navApps",
+          [":private_router/route", "/apps"]
+      ],
+      [
+          "navStores",
+          [":private_router/route", "/stores"]
+      ],
+      [
+          "navDomains",
+          [":private_router/route", "/domains"]
+      ],
+      [
+          "navUserSettings",
+          [":private_router/route", "/settings/user/general-info"]
+      ],
+      [
+          "navUserProfile",
+          [":private_router/route", "/user"]
+      ],
+      [
+          "toggleShortcuts",
+          [":nav_main_private_layout/state", "toggleDirection"]
+      ],
+      [
+          "hideShortcuts",
+          [":nav_main_private_layout/state", "hideDirection"]
+      ],
+      [
+          "navSignout",
+          [">login/flow", "logoutUser"]
+      ],
+      [
+          "navBlog",
+          [":common_router/route", "/blog"]
+      ],
+      [
+          "navDocs",
+          [":common_router/route", "/docs"]
+      ],
+      [
+          "navHelp",
+          [":common_router/route", "/support"]
+      ],
+      [
+          "toggleMobileMenu",
+          [":state", "toggleMobileMenu"]
+      ]
+    ],
+    "markup": [
+      "/private/nav_main_private.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "nav_main_private_layout"
+}
