@@ -31,6 +31,11 @@
       "domEvents": [
         {
           "on": "click",
+          "element": "admin-logo",
+          "flow": "privateHome"
+        },
+        {
+          "on": "click",
           "element": "documentation",
           "flow": "documentation"
         },
@@ -87,32 +92,40 @@
           [":private_router/route", "/"]
       ],
       [
-          "navApps",
-          [":private_router/route", "/apps"]
+          "documentation",
+          [":private_router/route", "/documentation"]
       ],
       [
-          "navStores",
-          [":private_router/route", "/stores"]
+          "tutorials",
+          [":private_router/route", "/tutorials"]
       ],
       [
-          "navDomains",
-          [":private_router/route", "/domains"]
+          "support",
+          [":private_router/route", "/support"]
       ],
       [
-          "navUserSettings",
-          [":private_router/route", "/settings/user/general-info"]
+          "contact",
+          [":private_router/route", "/contact"]
       ],
       [
-          "navUserProfile",
-          [":private_router/route", "/user"]
+          "about",
+          [":private_router/route", "/about"]
       ],
       [
-          "toggleShortcuts",
+          "blog",
+          [":private_router/route", "/blog"]
+      ],
+      [
+          "terms",
+          [":private_router/route", "/terms"]
+      ],
+      [
+          "privacy",
+          [":private_router/route", "/privacy"]
+      ],
+      [
+          "blog",
           [":nav_main_private_layout/state", "toggleDirection"]
-      ],
-      [
-          "hideShortcuts",
-          [":nav_main_private_layout/state", "hideDirection"]
       ],
       [
           "navSignout",
