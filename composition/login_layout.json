@@ -12,6 +12,28 @@
     },
     "markup": [
       "/public/login.html"
+    ],
+    "flow": [
+      [
+        "itemClick",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "url": "{event.target.href}"
+            }
+          }
+        ],
+        ":public_router/route"
+      ],
+      [
+          "toggleMobileMenu",
+          [":state", "toggleMobileMenu"]
+      ],
+      [
+          "publicHome",
+          [":public_router/route", "/"]
+      ]
     ]
   },
   "roles": {

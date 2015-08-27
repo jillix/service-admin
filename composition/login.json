@@ -1,0 +1,93 @@
+{
+  "config": {
+    "credentials": {
+      "service@jillix.com": "devpwd"
+    }
+  },
+  "client": {
+    "config": {
+      "homeUrl": "/",
+      "loginUrl": "/signin",
+      "successUrl": "/apps",
+      "emitEvents": true,
+      "redirect": true
+    },
+    "flow": [
+      [
+        "userLoggedIn",
+        ["!signin_layout/state", "login_error"],
+        [":navigate", "/apps"],
+        ":ERES"
+      ],
+      [
+        "userLoggedOut",
+        ["!signin_layout/state", "logout_error"],
+        [":navigate", "/"],
+        ":ERES"
+      ],
+      [
+        "passwordReseted",
+        ["!signin_layout/state", "error"],
+        [":signin_layout/state", "successfull"]
+      ],
+      [
+        "userSignedUp",
+        ["!signup_layout/state", "error"],
+        [":signup_layout/state", "successfull"]
+      ],
+      [
+        "validateLogin",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "schema": "login"
+            },
+            "set": {
+              "data.email": "email",
+              "data.pass": "pass"
+            }
+          }
+        ],
+        ":schema/validate"
+      ],
+      [
+        "validateSignup",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "schema": "signup"
+            },
+            "set": {
+              "data.user": "user",
+              "data.email": "email",
+              "data.pass": "pass"
+            }
+          }
+        ],
+        ":schema/validate"
+      ],
+      [
+        "validateReset",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "schema": "reset"
+            },
+            "set": {
+              "data.email": "email"
+            }
+          }
+        ],
+        ":schema/validate"
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "name": "login",
+  "module": "login"
+}
