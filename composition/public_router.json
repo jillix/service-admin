@@ -14,7 +14,7 @@
         "flow": [
             [
                 "public_homepage",
-                "login_layout/render"
+                "signin_layout/render"
             ]
         ]
     },
