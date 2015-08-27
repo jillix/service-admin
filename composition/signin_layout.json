@@ -1,0 +1,87 @@
+{
+  "client": {
+    "config": {
+      "title": "Sign in",
+      "templates": {
+        "layout": {
+          "to": ".pages-container",
+          "html": "/public/login.html"
+        }
+      },
+      "states": {
+        "login_start": [
+          {
+            "sel": ".splash",
+            "rm": [
+              "hide"
+            ]
+          },
+          {
+            "sel": ".login",
+            "add": [
+              "hide"
+            ]
+          },
+          {
+            "sel": ".error",
+            "add": [
+              "hide"
+            ]
+          }
+        ],
+        "login_error": [
+          {
+            "sel": ".splash",
+            "add": [
+              "hide"
+            ]
+          },
+          {
+            "sel": ".login",
+            "rm": [
+              "hide"
+            ]
+          },
+          {
+            "sel": ".error",
+            "rm": [
+              "hide"
+            ]
+          }
+        ]
+      },
+      "defaultTemplate": "layout",
+      "domEvents": [
+        {
+          "on": "click",
+          "selector": ".btn-login",
+          "flow": "loginBtnClick"
+        }
+      ]
+    },
+    "flow": [
+        [
+            "loginBtnClick",
+            [":state", "login_start"],
+            [
+              ":ALTR",
+              {
+                "set": {
+                  "email": "$.input-login-email:value",
+                  "pass": "$.input-login-password:value"
+                }
+              }
+            ],
+            [">login/flow", "loginUser"]
+        ]
+    ],
+    "markup": [
+      "/public/login.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "signin_layout"
+}
