@@ -1,0 +1,85 @@
+{
+  "client": {
+    "config": {
+      "templates": {
+        "layout": {
+          "to": ".main-nav",
+          "html": "/public/nav_main_public.html",
+          "render": true
+        }
+      },
+      "defaultTemplate": "layout",
+      "states": {
+        "resetNav": [
+          {
+            "sel": ".main-nav li",
+            "rm": [
+              "active"
+            ]
+          }
+        ],
+        "nav": [
+          {
+            "states": [
+              "resetNav"
+            ],
+            "add": [
+              "active"
+            ]
+          }
+        ],
+          "toggleMobileMenu": [{
+              "sel": ".collapsable-nav",
+              "toggle": ["show"]
+          }]
+      },
+      "domEvents": [
+        {
+          "on": "click",
+          "selector": ".public-nav-ul > li",
+          "flow": "itemClick"
+        },
+        {
+            "on": "click",
+            "selector": ".menu-icon",
+            "flow": "toggleMobileMenu"
+        },
+        {
+            "on": "click",
+            "element": "jillix-logo",
+            "flow": "publicHome"
+        }
+      ]
+    },
+    "flow": [
+      [
+        "itemClick",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "url": "{event.target.href}"
+            }
+          }
+        ],
+        ":public_router/route"
+      ],
+      [
+          "toggleMobileMenu",
+          [":state", "toggleMobileMenu"]
+      ],
+      [
+          "publicHome",
+          [":public_router/route", "/"]
+      ]
+    ],
+    "markup": [
+      "/public/nav_main_public.html"
+    ]
+  },
+  "name": "nav_main_public_layout",
+  "module": "view",
+  "roles": {
+    "*": true
+  }
+}
