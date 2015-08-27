@@ -19,7 +19,9 @@
       "/private/private_layout.html"
     ],
     "styles": [
-      "/css/private.css"
+        "/css/flexboxgrid.css",
+        "/css/style.css",
+        "/css/private.css"
     ]
   },
   "roles": {
