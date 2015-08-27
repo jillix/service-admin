@@ -10,34 +10,6 @@
       },
       "defaultTemplate": "layout",
       "states": {
-        "toggleDirection": [
-          {
-            "sel": ".direction-toggle",
-            "toggle": [
-              "hide"
-            ]
-          },
-          {
-            "sel": ".direction-arrow",
-            "toggle": [
-              "hide"
-            ]
-          }
-        ],
-        "hideDirection": [
-          {
-            "sel": ".direction-toggle",
-            "add": [
-              "hide"
-            ]
-          },
-          {
-            "sel": ".direction-arrow",
-            "add": [
-              "hide"
-            ]
-          }
-        ],
         "toggleMobileMenu": [{
             "sel": ".first-col",
             "toggle": ["show"]
@@ -59,63 +31,43 @@
       "domEvents": [
         {
           "on": "click",
-          "element": "apps",
-          "flow": "navApps"
+          "element": "documentation",
+          "flow": "documentation"
         },
         {
           "on": "click",
-          "element": "stores",
-          "flow": "navStores"
+          "element": "tutorials",
+          "flow": "support"
         },
         {
           "on": "click",
-          "element": "domains",
-          "flow": "navDomains"
+          "element": "contact",
+          "flow": "contact"
         },
         {
           "on": "click",
-          "element": "settings",
-          "flow": "navUserSettings"
+          "element": "about",
+          "flow": "about"
         },
         {
           "on": "click",
-          "element": "user",
-          "flow": "navUserProfile"
+          "element": "blog",
+          "flow": "blog"
         },
         {
           "on": "click",
-          "element": "dropdown",
-          "flow": "toggleShortcuts"
+          "element": "terms",
+          "flow": "terms"
         },
         {
           "on": "click",
-          "selector": ".direction-toggle",
-          "flow": "hideShortcuts"
-        },
-        {
-          "on": "mouseleave",
-          "selector": ".direction-toggle",
-          "flow": "hideShortcuts"
+          "element": "privacy",
+          "flow": "privacy"
         },
         {
           "on": "click",
           "element": "signout",
           "flow": "navSignout"
-        },
-        {
-          "on": "click",
-          "element": "blog",
-          "flow": "navBlog"
-        },
-        {
-          "on": "click",
-          "element": "docs",
-          "flow": "navDocs"
-        },
-        {
-          "on": "click",
-          "element": "support",
-          "flow": "navHelp"
         },
         {
             "on": "click",
@@ -165,18 +117,6 @@
       [
           "navSignout",
           [">login/flow", "logoutUser"]
-      ],
-      [
-          "navBlog",
-          [":common_router/route", "/blog"]
-      ],
-      [
-          "navDocs",
-          [":common_router/route", "/docs"]
-      ],
-      [
-          "navHelp",
-          [":common_router/route", "/support"]
       ],
       [
           "toggleMobileMenu",
