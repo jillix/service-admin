@@ -4,7 +4,8 @@
     "view": "adioo/view",
     "login": "adioo/login",
     "engine-ruut": "jillix/engine-ruut",
-    "engine-ruut-not-found": "jillix/engine-ruut-not-found"
+    "engine-ruut-not-found": "jillix/engine-ruut-not-found",
+    "engine-schema": "jillix/engine-schema"
   },
   "name": "service-admin",
   "version": "0.1.0",
