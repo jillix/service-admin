@@ -8,7 +8,7 @@
     "config": {
       "homeUrl": "/",
       "loginUrl": "/signin",
-      "successUrl": "/apps",
+      "successUrl": "/",
       "emitEvents": true,
       "redirect": true
     },
@@ -16,7 +16,7 @@
       [
         "userLoggedIn",
         ["!signin_layout/state", "login_error"],
-        [":navigate", "/apps"],
+        [":navigate", "/"],
         ":ERES"
       ],
       [
