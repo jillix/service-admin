@@ -2,6 +2,7 @@
   "client": {
     "load": [
       "private_router",
+      "nav_main_private_layout",
       "ruut_not_found"
     ],
     "config": {
