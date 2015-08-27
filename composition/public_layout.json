@@ -2,6 +2,7 @@
   "client": {
     "load": [
       "public_router",
+      "nav_main_public_layout",
       "ruut_not_found"
     ],
     "config": {
@@ -18,6 +19,7 @@
       "/public/public_layout.html"
     ],
     "styles": [
+        "/css/flexboxgrid.css",
         "/css/style.css",
         "/css/public.css"
     ]
