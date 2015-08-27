@@ -1,0 +1,551 @@
+.public-nav-ul li a:visited {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.public-nav-ul li a, .public-nav-ul a:visited {
+    text-decoration:none;
+    color: inherit;
+}
+
+.public-brand {
+    margin-left: 6em;
+    flex: 1;
+}
+
+.public-brand img {
+    width: 9.5em;
+}
+
+.public-nav-ul {
+    font-size: 1.7em;
+}
+
+.main-nav .public-nav-ul li {
+    margin-right: 0;
+}
+.main-nav .public-nav-ul li a {
+    padding: 10px 20px 10px 20px;
+}
+
+.public-nav {
+    padding-top: 30px;
+}
+
+.enter-email {
+    background: rgba(255, 255, 255, .9);
+    width: 750px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    margin-top: 155px;
+}
+.try-builder, .section-teampic {
+    background: url("/!/images/sprites/sprite-banner.png") no-repeat center;
+}
+
+.try-builder {
+    overflow: hidden;
+    background-position-y: -439px;
+    height: 459px;
+    margin-top: 25px;
+}
+
+.section-teampic {
+    height: 423px;
+    background-position-y: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.try-title {
+    font-family: TitilliumWeb-Regular;
+    font-size: 4.5em;
+    text-align: center;
+}
+
+.try-input {
+    margin: 0 auto;
+    width: 60%;
+    padding-top: 20px;
+}
+
+.try-input input {
+    background-color: rgba(255, 255, 255, 1);
+    color: #39434E;
+}
+
+.section-title {
+    font-size: 3.5em;
+}
+
+.section-description {
+    font-size: 2em;
+    line-height: 1.2;
+    padding-left: 225px;
+    padding-right: 225px;
+}
+
+.section-features, .section-bubledescrip, .section-works, .section-presenting {
+    text-align: center;
+}
+
+.feature-draw {
+    width: 450px;
+    margin: 0 auto;
+}
+
+.puzzle {
+    width: 80px;
+    position: absolute;
+    margin-top: 35%;
+    margin-top: 290px;
+    margin-left: 123px;
+}
+
+.zap {
+    color: rgb(156, 162, 184);
+    font-size: 7em;
+    position: absolute;
+    margin-top: 199px;
+    margin-left: -241px;
+}
+
+.megaphone {
+    color: rgb(156, 162, 184);
+    font-size: 4.5em;
+    position: absolute;
+    margin-left: 131px;
+}
+
+.feature-circle {
+    display: flex;
+    border: 15px solid rgb(156, 162, 184);
+    justify-content: center;
+    border-radius: 50%;
+    width: 320px;
+    height: 320px;
+    margin: 0 auto;
+}
+
+.feature-column {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 35px;
+}
+
+.feature-column h3 {
+    font-family: TitilliumWeb-Bold;
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+
+.feature-column p {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.feature-column p, .feature-column h3 {
+    flex: 1;
+    text-align: center;
+}
+
+.feature-summary {
+    background: rgb(218,225,233);;
+}
+
+.summary-title {
+    font-family: TitilliumWeb-Bold;
+    font-size: 1.5em;
+}
+
+.summary-description {
+    font-size: 1.5em;
+}
+
+.summary-item {
+    padding-top: 50px;
+}
+
+.summary-icon-worker, .summary-icon-cloud, .summary-icon-report {
+    background: url("/!/images/sprites/sprite-features.svg")  no-repeat center;
+    background-size: 100px 100px;
+}
+
+.summary-icon-cloud {
+    width: 123.75px;
+    height: 84.38px;
+}
+
+.feature-list-link {
+    background: rgb(0,138,209);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 190px;
+}
+
+.icon-box {
+    width: 144px;
+    height: 101px;
+    margin: 0 auto;
+}
+
+i {
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+
+}
+
+.svg-cloud, .svg-report, .svg-worker {
+    background: url("/!/images/sprites/sprite-features.svg") 0 0 no-repeat;
+}
+
+.svg-report {
+    width: 111.38px;
+    height: 83.76px;
+    background-position-x: -123px;
+}
+
+.svg-cloud {
+    width: 123.75px;
+    height: 84.38px;
+}
+
+.svg-worker {
+    width: 88.91px;
+    height: 103.98px;
+    background-position-y: -91px;
+}
+
+.feature-list-link a, .works-link a {
+    font-size: 3.5em;
+    color: white;
+}
+
+.bubledescrip-container, .works-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bubledescrip-item, .work-description, .work-item {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.work-description {
+    flex: 1;
+    min-width: 360px;
+}
+
+.work-item {
+    flex: 2;
+    min-width: 275px;
+    justify-content: space-around;
+}
+
+.bubledescrip-title, .work-title {
+    font-family: TitilliumWeb-Bold;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.bubledescrip-text p, .work-description p {
+    font-size: 1.5em;
+    text-align: left;
+    margin-top: 0;
+}
+
+.works-link {
+    display: flex;
+    height: 190px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    align-items: center;
+    justify-content: center;
+    background: rgb(57,67,78);
+}
+
+.section-works {
+    background: rgb(244,248,253);
+}
+
+.work-item {
+    display: flex;
+    width: 580px;
+    flex-wrap: wrap;
+}
+
+.work-draw {
+    text-align: left;
+}
+
+.work-draw img {
+    width: 300px;
+}
+
+.work-draw-description p {
+    font-size: 1.5em;
+    background: rgb(57,67,78);
+    color: white;
+    padding: 5px 15px;
+    margin: 3px;
+    text-align: left;
+    min-width: 275px;
+    font-family: TitilliumWeb-Regular;
+}
+
+.presenting-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.presenting-item {
+    font-size: 1.5em;
+    color: white;
+    font-family: TitilliumWeb-Regular;
+    padding: 5px 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+.presenting-line {
+    width: 100%;
+    height: 2px;
+    background: #9ba3b8;
+    position: absolute;
+    left: 0;
+    margin-top: 73px;
+    z-index: -1;
+}
+.teampic-square {
+    background: white;
+    width: 581px;
+    margin-right: 100px;
+    height: 200px;
+    padding: 50px 57px;
+    display: flex;
+    align-items: center;
+}
+.teampic-img img {
+    width: 140px;
+}
+.teampic-img {
+    text-align: right;
+    flex: 1;
+}
+
+.teampic-text {
+    flex: 2;
+    font-size: 1.5em;
+    font-family: TitilliumWeb-Bold;
+}
+
+.teampic-text p {
+    font-family: TitilliumWeb-Regular;
+}
+
+/* colors */
+.purple {
+    background: #f37b97;
+}
+
+.green {
+    background: #50b863;
+}
+
+.blue-2 {
+    background: #5eaff1;
+}
+
+.mauve {
+    background: #aa86f4;
+}
+
+.red {
+    background: #fc7651;
+}
+
+.wrap-public {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1490px;
+    margin: 0 auto;
+}
+
+.jillix-logo {
+    width: 133px;
+    padding-left: 20px;
+}
+
+.menu-icon {
+    width: 40px;
+}
+
+.nav-toggle-btn {
+    display: none;
+}
+
+.jillix-logo {
+    cursor: pointer;
+}
+
+/*2 media querys (max-width: 767px); (max-width: 972px)*/
+@media (max-width: 768px) {
+    .enter-email {
+        background: rgba(255, 255, 255, .9);
+        width: 100%;
+        height: inherit;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+        padding-bottom: 50px;
+        margin-top: 0;
+    }
+    .try-builder, .enter-email {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .input-add-on {
+        display: block;
+    }
+    .input-add-on-field {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .input-add-on-field:not(:last-child) {
+        border: 2px solid #51545b;
+    }
+    .try-input {
+        text-align: center;
+    }
+    .try-input button {
+        margin-top: 48px;
+        min-width: 150px;
+    }
+    .section-description {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .feature-draw {
+        width: 100%;
+    }
+    .feature-circle {
+        width: 270px;
+        height: 270px;
+    }
+    .puzzle {
+        width: 65px;
+        margin-top: 248px;
+        margin-left: 102px;
+    }
+    .megaphone {
+        font-size: 4em;
+        margin-left: 115px;
+    }
+    .zap {
+        margin-top: 236px;
+        margin-left: -175px;
+        font-size: 5em;
+    }
+    .bubledescrip-item {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .bubledescrip-image img, .presenting-item {
+        width: 100%;
+    }
+    .presenting-line {
+        display: none;
+    }
+    .presenting-item {
+        margin-top: 40px;
+    }
+    .teampic-square {
+        text-align: center;
+        margin: 0 auto;
+        width: 85%;
+        padding: 49px 10px;
+        display: block;
+        height: inherit;
+    }
+    .teampic-img {
+        text-align: center;
+    }
+    .section-teampic {
+        display: block;
+        height: initial;
+    }
+    .work-draw {
+        text-align: center;
+    }
+    .work-draw img {
+        width: 80%;
+        max-width: 285px;
+    }
+    .works-container {
+        display: block;
+    }
+    .work-description {
+        padding-left: 0;
+        padding-right: 0;
+        width: 86%;
+        max-width: 550px;
+        min-width: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .work-item {
+        display: block;
+        width: inherit;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .work-draw-description p {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .jillix-logo {
+        display: none;
+    }
+    .public-nav {
+        padding-top: 12px;
+    }
+    .collapsable-nav {
+        padding-bottom: 50px;
+    }
+    .collapsable-nav {
+        display: none;
+    }
+    .show {
+        display: block;
+    }
+    .main-nav .public-nav-ul .toggle-main-nav {
+        padding-right: 0;
+    }
+    .try-builder {
+        margin-top: 0;
+    }
+    .nav-toggle-btn {
+        display: block;
+    }
+}
+@media (max-width: 972px) {
+    .presenting-line {
+        display: none;
+    }
+    .footer-companies {
+        width: 80%;
+    }
+}
