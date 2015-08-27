@@ -24,6 +24,10 @@
                 "private_homepage_layout/render"
             ],
             [
+                "documentation",
+                "documentation_layout/render"
+            ],
+            [
                 "tutorials",
                 "tutorials_layout/render"
             ],
