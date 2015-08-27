@@ -398,6 +398,10 @@ i {
     cursor: pointer;
 }
 
+.nav-title {
+    font-size: 24px;
+}
+
 /*2 media querys (max-width: 767px); (max-width: 972px)*/
 @media (max-width: 768px) {
     .enter-email {
