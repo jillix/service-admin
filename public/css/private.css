@@ -1124,6 +1124,10 @@ input#app-builder-search {
     top: 69px;
 }
 
+.logo-ul {
+    padding-left: 0;
+}
+
 @media (max-width: 1060px) {
     .logo-col {
         display: none;
