@@ -1,0 +1,55 @@
+{
+  "client": {
+    "config": {
+      "templates": {
+        "layout": {
+          "to": ".money-nav ul",
+          "html": "/private/nav_money.html",
+          "render": true
+        }
+      },
+      "defaultTemplate": "layout",
+      "domEvents": [
+        {
+          "on": "click",
+          "selector": "li",
+          "flow": "itemClick"
+        }
+      ]
+    },
+    "flow": [
+      [
+        "itemClick",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "url": "{event.target.href}"
+            }
+          }
+        ],
+        ":private_router/route"
+      ],
+      [
+          "showFooter",
+          [
+              ":private_layout/state", "showFooter"
+          ]
+      ],
+      [
+          "hideFooter",
+          [
+              ":private_layout/state", "hideFooter"
+          ]
+      ]
+    ],
+    "markup": [
+      "/private/nav_money.html"
+    ]
+  },
+  "name": "nav_money_layout",
+  "module": "view",
+  "roles": {
+    "*": true
+  }
+}

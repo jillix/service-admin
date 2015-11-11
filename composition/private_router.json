@@ -28,12 +28,12 @@
             ],
             [
                 "money",
-                "money_layout/render",
+                "money_options_layout/render",
                 ["flow", "add_active_class"]
             ],
             [
                 "money",
-                "money_layout/render",
+                "money_options_layout/render",
                 ["flow", "add_active_class"]
 
             ],
