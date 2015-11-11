@@ -4,7 +4,16 @@
             "routes": [
                 "money",
                 {
-                    "money": "money",
+                    "money": [
+                        "money",
+                        {
+                            "invoices": "invoices",
+                            "history": "history",
+                            "credit-cards": "credit-cards",
+                            "vouchers": "vouchers",
+                            "earnings": "earnings"
+                        }
+                    ],
                     "infrastructure": "infrastructure",
                     "user-management": "user-management"
                 }
@@ -30,12 +39,13 @@
                 "money",
                 "money_options_layout/render",
                 ["flow", "add_active_class"]
+
             ],
             [
-                "money",
+                "invoices",
                 "money_options_layout/render",
+                [":money_options_layout/state", "invoices"],
                 ["flow", "add_active_class"]
-
             ],
             [
                 "infrastructure",

@@ -43,6 +43,18 @@
         [
             "renderedDOM",
             "nav_money_layout/render"
+        ],
+        [
+            "invoices",
+            [
+                "LOAD", ["invoices_layout"]
+            ],
+            [
+                ":state", "hide-all"
+            ],
+            [
+                ":state", "invoices"
+            ]
         ]
     ]
   },

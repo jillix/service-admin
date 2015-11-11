@@ -1,0 +1,23 @@
+{
+  "client": {
+    "config": {
+      "title": "Invoices",
+      "templates": {
+        "layout": {
+          "to": ".money-options > .invoices",
+          "html": "/private/invoices.html",
+          "render": true
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/private/invoices.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "invoices_layout"
+}
