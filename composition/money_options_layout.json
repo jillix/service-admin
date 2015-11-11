@@ -1,0 +1,162 @@
+{
+  "client": {
+    "config": {
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/application/app_options.html",
+          "render": true
+        }
+      },
+      "defaultTemplate": "layout",
+      "states": {
+          "hide-all": [{
+              "sel": ".app-options > div",
+              "add": ["hide"]
+          }],
+          "Invoices": [{
+              "sel": ".app-options > .app-dashboard",
+              "rm": ["hide"]
+          }],
+          "History": [{
+              "sel": ".app-options > .app-editor",
+              "rm": ["hide"]
+          }],
+          "Credit-card-info": [{
+              "sel": ".app-options > .app-terminal",
+              "rm": ["hide"]
+          }],
+          "Vouchers": [{
+              "sel": ".app-options > .app-settings",
+              "rm": ["hide"]
+          }],
+          "Costs/earnings": [{
+              "sel": ".app-options > .app-deploy",
+              "rm": ["hide"]
+          }]
+      }
+    },
+    "markup": [
+      "/private/money_options.html"
+    ],
+    "flow": [
+        [
+            "renderedDOM",
+            [
+              ":ALTR",
+              {
+                "data": {
+                  "data.baseUrl": "/{_path.0}/{_path.1}"
+                }
+              }
+            ],
+            "nav_app_layout/render"
+        ],
+        [
+            "app_dashboard",
+            [
+                "LOAD", ["app_dashboard_layout"]
+            ],
+            [
+                ":state", "hide-all"
+            ],
+            [
+                ":state", "app_dashboard"
+            ],
+            [
+                ":private_layout/state", "hideFooter"
+            ]
+        ],
+        [
+            "app_editor",
+            [
+                ":ALTR",
+                {
+                    "set":{
+                        "path": "_path"
+                    }
+                }
+            ],
+            [
+                "LOAD", ["app_editor_layout"]
+            ],
+            [
+                ":state", "hide-all"
+            ],
+            [
+                ":state", "app_editor"
+            ],
+            [
+                ":private_layout/state", "hideFooter"
+            ],
+            ":app_file_tree/openPath"
+        ],
+        [
+            "app_terminal",
+            [
+                "LOAD", ["app_terminal_layout"]
+            ],
+            [
+                ":state", "hide-all"
+            ],
+            [
+                ":state", "app_terminal"
+            ],
+            [
+                ":private_layout/state", "hideFooter"
+            ]
+
+        ],
+        [
+            "app_settings",
+            [
+                "LOAD", ["app_settings_layout"]
+            ],
+            [
+                ":state", "hide-all"
+            ],
+            [
+                ":state", "app_settings"
+            ],
+            [
+                ":private_layout/state", "displayContainer"
+            ]
+
+        ],
+        [
+            "app_deploy",
+            [
+                "LOAD", ["app_deploy_layout"]
+            ],
+            [
+                ":state", "hide-all"
+            ],
+            [
+                ":state", "app_deploy"
+            ],
+            [
+                ":private_layout/state", "displayContainer"
+            ]
+
+        ],
+        [
+            "app_builder",
+            [":private_layout/state", "hideFooter"],
+            [
+                "LOAD", ["app_builder_layout"]
+            ],
+            [
+                ":state", "hide-all"
+            ],
+            [
+                ":state", "app_builder"
+            ]
+        ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "app_options_layout"
+}
