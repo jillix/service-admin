@@ -1,0 +1,28 @@
+{
+  "client": {
+    "config": {
+      "templates": {
+        "layout": {
+          "to": ".sidebars .editor-wrapper > .form-editor",
+          "html": "/application/editor_forms.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/application/editor_forms.html"
+    ],
+    "flow": [
+      [
+        "renderedDOM",
+        ":app_builder_form_editor_custom/start",
+        ["LOAD", ["app_builder_form_editor"]]
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "app_builder_editor_forms_layout"
+}

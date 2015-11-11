@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "templates": {
+        "layout": {
+          "to": ".app-builder-filters",
+          "html": "/application/builder_filters.html",
+          "render": true
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/application/builder_filters.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "app_builder_filters_layout"
+}

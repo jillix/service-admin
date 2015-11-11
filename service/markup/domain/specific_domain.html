@@ -1,0 +1,276 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <h3>Domain settings</h3>
+        </div>
+        <div class="col-xs-12 col-sm-6 input-column">
+            <input class="input-add-on-search general-search" placeholder="Search an element">
+        </div>
+    </div>
+</div>
+<div class="instructions">
+    <p>
+        These are the main settings for your domain. <br>
+        Changing details here can have major impacts on your running projects.
+    </p>
+</div>
+<div class="default-form">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-lg-5">
+                <div class="default-form-item">
+                    <!-- Domain name form -->
+                    <div class="title">Domain Name</div>
+                    <div class="border"></div>
+                    <p class="name">pradas.ch</p>
+                    <div class="row form-input">
+                        <div class="col-xs-12">
+                            <div class="input-add-on">
+                                <input type="" placeholder="Change domain name">
+                                <button id="btnApps" class="btn btn-left-0" type="button">Change name</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="default-form-item">
+                    <!-- Delete project form -->
+                    <div class="title">Delete domain</div>
+                    <div class="border"></div>
+                    <div class="change-settings-inputs">
+                        <div class="row form-input">
+                            <div class="col-xs-12">
+                                <div class="input-add-on">
+                                    <input type="" placeholder="Write the domain name">
+                                    <button id="btnApps" class="btn btn-left-0 btn-c4" type="button">Delete domain</button>
+                                </div>
+                                <p class="settings-warning">
+                                    Once you delete this domain, there is no going back. Please be certain.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advanced options -->
+                <div class="default-form-item">
+                    <div class="domain-adv-option">
+                        <div class="option">Advanced options <span class="pl-xs octicon octicon-chevron-right"></span> <span class="pl-xs octicon octicon-chevron-down hide"></span></div>
+                        <div class="adv-container hide">
+                            <div class="default-form-item">
+                                <!-- A records -->
+                                <div class="title">A records</div>
+                                <div class="border"></div>
+                                <table class="a-records">
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>Host</td>
+                                        <td>TTL</td>
+                                        <td>Points to</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>
+                                            <div class="not-edit">@</div>
+                                            <input class="to-edit hide" value="@">
+                                        </td>
+                                        <td>
+                                            <div class="not-edit">1 Hour</div>
+                                            <input class="to-edit hide" value="1 Hour">
+                                        </td>
+                                        <td>
+                                            <div class="not-edit">86.132.25.177</div>
+                                            <input class="to-edit hide" value="86.132.25.177">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>
+                                            <div class="not-edit">@</div>
+                                            <input class="to-edit hide" value="@">
+                                        </td>
+                                        <td>
+                                            <div class="not-edit">2 Hour</div>
+                                            <input class="to-edit hide" value="1 Hour">
+                                        </td>
+                                        <td>
+                                            <div class="not-edit">145.132.25.254</div>
+                                            <input class="to-edit hide" value="86.132.25.177">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="default-form-item">
+                                <!-- Edit button -->
+                                <button class="editA btn btn-c2 btn-login" type="submit">Edit</button>
+                                <button class="saveA hide btn btn-c2 btn-login" type="submit">Save</button>
+                                <button class="cancelA hide btn btn-c5 btn-login" type="submit">Cancel</button>
+                            </div>
+
+                            <div class="default-form-item">
+                                <!-- MX records -->
+                                <div class="title">MX (Mail Exchanger)</div>
+                                <div class="border"></div>
+                                <table class="mx-records">
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>Priority</td>
+                                        <td>Host</td>
+                                        <td>Points to</td>
+                                        <td>TTL</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>
+                                            <div class="not-edit">@</div>
+                                            <input class="to-edit hide" value="@">
+                                        </td>
+                                        <td>
+                                            <div class="not-edit">1 Hour</div>
+                                            <input class="to-edit hide" value="1 Hour">
+                                        </td>
+                                        <td>
+                                            <div class="not-edit">86.132.25.177</div>
+                                            <input class="to-edit hide" value="86.132.25.177">
+                                        </td>
+                                        <td>
+                                            <div class="not-edit">1 Hour</div>
+                                            <input class="to-edit hide" value="1 Hour">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>
+                                            <div class="not-edit">@</div>
+                                            <input class="to-edit hide" value="@">
+                                        </td>
+                                        <td>
+                                            <div class="not-edit">2 Hour</div>
+                                            <input class="to-edit hide" value="1 Hour">
+                                        </td>
+                                        <td>
+                                            <div class="not-edit">145.132.25.254</div>
+                                            <input class="to-edit hide" value="86.132.25.177">
+                                        </td>
+                                        <td>
+                                            <div class="not-edit">2 Hour</div>
+                                            <input class="to-edit hide" value="2 Hour">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="default-form-item">
+                                <!-- Edit button -->
+                                <button class="editMx btn btn-c2 btn-login" type="submit">Edit</button>
+                                <button class="saveMx hide btn btn-c2 btn-login" type="submit">Save</button>
+                                <button class="cancelMx hide btn btn-c5 btn-login" type="submit">Cancel</button>
+                            </div>
+
+                            <div class="default-form-item">
+                                <!-- Cnames records -->
+                                <div class="title">CNAMES</div>
+                                <div class="border"></div>
+                                <table class="c-records">
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>Alias</td>
+                                        <td>TTL</td>
+                                        <td>Host</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>
+                                            <div class="not-edit">www</div>
+                                            <input class="to-edit hide" value="www">
+                                        </td>
+                                        <td>
+                                            <div class="not-edit">1 Hour</div>
+                                            <input class="to-edit hide" value="1 Hour">
+                                        </td>
+                                        <td>
+                                            <div class="not-edit">ghs.google.com</div>
+                                            <input class="to-edit hide" value="ghs.google.com">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>
+                                            <div class="not-edit">@</div>
+                                            <input class="to-edit hide" value="email">
+                                        </td>
+                                        <td>
+                                            <div class="not-edit">2 Hour</div>
+                                            <input class="to-edit hide" value="1 Hour">
+                                        </td>
+                                        <td>
+                                            <div class="not-edit">145.132.25.254</div>
+                                            <input class="to-edit hide" value="smtp.secureserver.net">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="default-form-item">
+                                <!-- Edit button -->
+                                <button class="editC btn btn-c2 btn-login" type="submit">Edit</button>
+                                <button class="saveC hide btn btn-c2 btn-login" type="submit">Save</button>
+                                <button class="cancelC hide btn btn-c5 btn-login" type="submit">Cancel</button>
+                            </div>
+
+                            <div class="default-form-item">
+                                <!-- TXT records -->
+                                <div class="title">TXT records</div>
+                                <div class="border"></div>
+                                <table class="txt-records">
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>Host</td>
+                                        <td>TTL</td>
+                                        <td>Text value</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>
+                                            <div class="not-edit">@</div>
+                                            <input class="to-edit hide" value="@">
+                                        </td>
+                                        <td>
+                                            <div class="not-edit">1 Hour</div>
+                                            <input class="to-edit hide" value="1 Hour">
+                                        </td>
+                                        <td>
+                                            <div class="not-edit">this is the text value</div>
+                                            <input class="to-edit hide" value="this is the text value">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>
+                                            <div class="not-edit">@</div>
+                                            <input class="to-edit hide" value="@">
+                                        </td>
+                                        <td>
+                                            <div class="not-edit">2 Hour</div>
+                                            <input class="to-edit hide" value="1 Hour">
+                                        </td>
+                                        <td>
+                                            <div class="not-edit">another value</div>
+                                            <input class="to-edit hide" value="another value">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="default-form-item">
+                                <!-- Edit button -->
+                                <button class="editTxt btn btn-c2 btn-login" type="submit">Edit</button>
+                                <button class="saveTxt hide btn btn-c2 btn-login" type="submit">Save</button>
+                                <button class="cancelTxt hide btn btn-c5 btn-login" type="submit">Cancel</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

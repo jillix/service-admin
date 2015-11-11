@@ -1,0 +1,48 @@
+{
+  "client": {
+    "config": {
+      "title": "jillix Service Apps",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/application/list.html"
+        }
+      },
+      "defaultTemplate": "layout",
+      "domEvents": [
+        {
+          "on": "click",
+          "element": "btnNew",
+          "flow": "newBtnClick"
+        }
+      ]
+    },
+    "markup": [
+      "/application/list.html"
+    ],
+    "flow": [
+      [
+        "renderedDOM",
+        [":private_layout/state", "showFooter"],
+        [":private_layout/state", "displayContainer"]
+      ],
+      [
+        "newBtnClick",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "url": "/new"
+            }
+          }
+        ],
+        ":private_router/route"
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "user_applications_layout"
+}

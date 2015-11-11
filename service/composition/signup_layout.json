@@ -1,0 +1,129 @@
+{
+  "client": {
+    "config": {
+      "title": "Sign up",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/login/signup.html"
+        }
+      },
+      "defaultTemplate": "layout",
+      "states": {
+          "displayChoosePlanPhase": [{
+              "sel": ".create-account-phase",
+              "add": ["hide"]
+          },
+          {
+              "sel": ".choose-plan-phase",
+              "rm": ["hide"]
+          },
+          {
+              "sel": ".account-confirmation-phase",
+              "add": ["hide"]
+          }
+          ],
+          "displayAccountConfirmation": [{
+              "sel": ".create-account-phase",
+              "add": ["hide"]
+          },
+          {
+              "sel": ".choose-plan-phase",
+              "add": ["hide"]
+          },
+          {
+              "sel": ".account-confirmation-phase",
+              "rm": ["hide"]
+          }
+          ],
+          "toStepTwo": [{
+              "sel": ".cube",
+              "add": ["right-animation"]
+          }
+          ],
+          "toStepThree": [{
+              "sel": ".cube",
+              "add": ["back-animation"]
+          }
+          ],
+          "completeSignUp": [{
+              "sel": ".cube",
+              "add": ["left-animation"]
+          }
+          ],
+        "successfull": [
+          {
+            "element": "confimBox",
+            "rm": [
+              "hide"
+            ]
+          }
+        ],
+        "error": [
+          {
+            "sel": "confimBox",
+            "rm": [
+              "hide"
+            ]
+          }
+        ]
+      },
+      "domEvents": [
+        {
+          "on": "click",
+          "element": "btn-to-step-2",
+          "flow": "toStepTwo"
+        },
+        {
+          "on": "click",
+          "element": "btn-to-step-3",
+          "flow": "toStepThree"
+        },
+        {
+          "on": "click",
+          "element": "btn-create-account",
+          "flow": "createAccount"
+        },
+        {
+            "on": "click",
+            "element": "complete-signup",
+            "flow": "completeSignup"
+        }
+      ]
+    },
+    "flow": [
+      [
+          "renderedDOM",
+          [":public_layout/state", "displayContainer"]
+      ],
+      [
+          "toStepTwo",
+          [":state", "toStepTwo"]
+      ],
+      [
+          "toStepThree",
+          [":state", "toStepThree"],
+          [":public_layout/state", "footerCorrectionAdd"]
+      ],
+      [
+          "createAccount",
+          [":state", "displayChoosePlanPhase"]
+      ],
+      [
+          "completeSignup",
+          [":state", "completeSignUp"]
+      ]
+    ],
+    "markup": [
+      "/login/signup.html"
+    ],
+    "styles": [
+      "/css/font-awesome-4.4.0/css/font-awesome.min.css"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "signup_layout"
+}

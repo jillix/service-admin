@@ -1,0 +1,19 @@
+{
+  "config": {},
+  "load": [],
+  "client": {
+    "config": {},
+    "flow": [],
+    "load": []
+  },
+  "roles": {"*": true},
+  "name": "app_editor_custom",
+  "module": {
+    "client": {
+      "module": [
+        "/js/custom/file-editor.js",
+        "/libs/jquery.js"
+      ]
+    }
+  }
+}

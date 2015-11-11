@@ -1,0 +1,24 @@
+{
+    "roles": {"*": true},
+    "name": "app_builder_form_editor_custom",
+    "module": {
+        "client": {
+            "module": [
+                "/custom/form_editor/index.js",
+                "/libs/jquery.js"
+            ],
+            "flow": [
+                [
+                    "fillFormData",
+                    ":app_builder_form_editor/fill"
+                ],
+                [
+                    "updateAceFromForms",
+                    ":app_builder_form_editor/submit",
+                    ":updateAceEditor",
+                    ":app_builder_editor/set"
+                ]
+            ]
+        }
+    }
+}

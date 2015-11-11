@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "Blog",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/common/blog.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/common/blog.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "blog_layout"
+}

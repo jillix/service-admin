@@ -1,0 +1,40 @@
+{
+  "client": {
+    "config": {
+      "title": "application editor",
+      "templates": {
+        "layout": {
+          "to": ".app-options > .app-editor",
+          "html": "/application/editor.html",
+          "render": true
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/application/editor.html"
+    ],
+    "flow": [
+      [
+        "renderedDOM",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "project": "{_path.1}"
+            }
+          }
+        ],
+        [":private_layout/state", "hideFooter"],
+        ":app_editor/load",
+        ":app_editor_sidebar/load",
+        ":app_file_tree/load"
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "app_editor_layout"
+}

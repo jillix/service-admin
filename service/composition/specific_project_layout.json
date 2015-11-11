@@ -1,0 +1,48 @@
+{
+  "client": {
+    "config": {
+      "title": "Project",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/project/specific_project.html"
+        }
+      },
+      "defaultTemplate": "layout",
+      "states": {
+          "toggleStates": [
+              {
+                  "sel": ".project-status",
+                  "toggle": ["hide"]
+              }
+          ]
+      },
+      "domEvents": [
+          {
+              "on": "click",
+              "selector": ".status-btn" ,
+              "flow": "toggleStatus"
+          }
+      ]
+    },
+    "markup": [
+      "/project/specific_project.html"
+    ],
+    "flow": [
+      [
+        "renderedDOM",
+        [":private_layout/state", "showFooter"],
+        [":private_layout/state", "displayContainer"]
+      ],
+      [
+        "toggleStatus",
+        [":state", "toggleStates"]
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "specific_project_layout"
+}

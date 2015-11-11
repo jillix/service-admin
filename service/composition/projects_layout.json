@@ -1,0 +1,41 @@
+{
+  "client": {
+    "config": {
+      "title": "list projects",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/project/list.html"
+        }
+      },
+      "defaultTemplate": "layout",
+      "domEvents": [
+          {
+              "on": "click",
+              "element": "newProject",
+              "flow": "newProject"
+          }
+      ]
+    },
+    "markup": [
+      "/project/list.html"
+    ],
+    "flow": [
+      [
+        "renderedDOM",
+        [":private_layout/state", "showFooter"],
+        [":private_layout/state", "displayContainer"]
+      ],
+      [
+          "newProject",
+          [":ALTR", {"data": {"url": "/projects/new}"}}],
+          ":private_router/route"
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "projects_layout"
+}

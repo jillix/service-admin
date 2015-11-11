@@ -1,0 +1,29 @@
+{
+  "client": {
+    "config": {
+      "title": "list domains",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/domain/list.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/domain/list.html"
+    ],
+    "flow": [
+      [
+        "renderedDOM",
+        [":private_layout/state", "showFooter"],
+        [":private_layout/state", "displayContainer"]
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "domains_layout"
+}

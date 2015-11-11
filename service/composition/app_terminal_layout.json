@@ -1,0 +1,31 @@
+{
+  "client": {
+    "config": {
+      "title": "application terminal",
+      "templates": {
+        "layout": {
+          "to": ".app-options > .app-terminal",
+          "html": "/application/terminal.html",
+          "render": true
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/application/terminal.html"
+    ],
+    "flow": [
+        [
+            "renderedDOM",
+            ["LOAD", ["app_terminal"]],
+            [":private_layout/state", "displayContainer"],
+            [":private_layout/state", "hideFooter"]
+        ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "app_terminal_layout"
+}

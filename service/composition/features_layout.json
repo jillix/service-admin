@@ -1,0 +1,28 @@
+{
+  "client": {
+    "config": {
+      "title": "Features",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/common/features.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/common/features.html"
+    ],
+    "flow": [
+        [
+            "renderedDOM",
+            [":public_layout/state", "displayContainer"]
+        ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "features_layout"
+}

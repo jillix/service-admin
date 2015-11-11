@@ -4,7 +4,7 @@
       "templates": {
         "layout": {
           "to": ".main-nav",
-          "html": "/private/nav_main_private.html",
+          "html": "/root/private/nav_main_private.html",
           "render": true
         }
       },
@@ -96,49 +96,109 @@
       },
       "domEvents": [
         {
-          "on": "click",
-          "element": "admin-logo",
-          "flow": "privateHome"
+          "on": "mouseover",
+          "selector": ".navigation-menu",
+          "flow": "showNavigationMenu"
+        },
+        {
+            "on": "mouseleave",
+            "selector": ".navigation-menu",
+            "flow": "hideNavigationMenu"
+        },
+        {
+            "on": "click",
+            "element": "home",
+            "flow": "privateHome"
         },
         {
           "on": "click",
-          "element": "documentation",
-          "flow": "documentation"
+          "element": "apps",
+          "flow": "navApps"
         },
         {
           "on": "click",
-          "element": "tutorials",
-          "flow": "support"
+          "element": "stores",
+          "flow": "navStores"
         },
         {
           "on": "click",
-          "element": "contact",
-          "flow": "contact"
+          "element": "domains",
+          "flow": "navDomains"
         },
         {
           "on": "click",
-          "element": "about",
-          "flow": "about"
+          "element": "new",
+          "flow": "navNew"
         },
         {
           "on": "click",
-          "element": "blog",
-          "flow": "blog"
+          "element": "projects",
+          "flow": "navProjects"
         },
         {
           "on": "click",
-          "element": "terms",
-          "flow": "terms"
+          "element": "organizations",
+          "flow": "navOrganizations"
         },
         {
           "on": "click",
-          "element": "privacy",
-          "flow": "privacy"
+          "element": "billings",
+          "flow": "navBillings"
+        },
+        {
+          "on": "click",
+          "element": "versions",
+          "flow": "navVersions"
+        },
+        {
+          "on": "click",
+          "element": "account-settings",
+          "flow": "accountSettings"
+        },
+        {
+          "on": "click",
+          "element": "profile-settings",
+          "flow": "profileSettings"
+        },
+        {
+          "on": "click",
+          "element": "user",
+          "flow": "navUserProfile"
+        },
+        {
+          "on": "click",
+          "element": "dropdown",
+          "flow": "toggleShortcuts"
+        },
+        {
+          "on": "click",
+          "selector": ".direction-toggle",
+          "flow": "hideShortcuts"
+        },
+        {
+          "on": "mouseleave",
+          "selector": ".direction-toggle",
+          "flow": "hideShortcuts"
         },
         {
           "on": "click",
           "element": "signout",
           "flow": "navSignout"
+        },
+        {
+          "on": "click",
+          "element": "blog",
+          "flow": "navBlog"
+        },
+        {
+          "on": "click",
+          "element": "docs",
+          "flow": "navDocs"
+        },
+        {
+          "on": "click",
+          "element": "support",
+          "flow": "navHelp"
         },
         {
             "on": "click",
@@ -158,44 +218,82 @@
           [":private_router/route", "/"]
       ],
       [
-          "documentation",
-          [":private_router/route", "/documentation"]
+          "showNavigationMenu",
+          [":state", "showNavigationMenu"]
       ],
       [
-          "tutorials",
-          [":private_router/route", "/tutorials"]
+          "hideNavigationMenu",
+          [":state", "hideNavigationMenu"]
       ],
       [
-          "support",
-          [":private_router/route", "/support"]
+          "navApps",
+          [":private_router/route", "/apps"],
+          [":state", "showApps"],
+          [":state", "hideNavigationMenu"]
       ],
       [
-          "contact",
-          [":private_router/route", "/contact"]
+          "navStores",
+          [":private_router/route", "/stores"]
       ],
       [
-          "about",
-          [":private_router/route", "/about"]
+          "navDomains",
+          [":private_router/route", "/domains"]
       ],
       [
-          "blog",
-          [":private_router/route", "/blog"]
+          "navNew",
+          [":private_router/route", "/new"]
       ],
       [
-          "terms",
-          [":private_router/route", "/terms"]
+          "navProjects",
+          [":private_router/route", "/projects"]
       ],
       [
-          "privacy",
-          [":private_router/route", "/privacy"]
+          "navOrganizations",
+          [":private_router/route", "/organizations"]
       ],
       [
-          "blog",
+          "navBillings",
+          [":private_router/route", "/billings"]
+      ],
+      [
+          "navVersions",
+          [":private_router/route", "/versions"]
+      ],
+      [
+          "accountSettings",
+          [":private_router/route", "/settings/account"]
+      ],
+      [
+          "profileSettings",
+          [":private_router/route", "/settings/profile"]
+      ],
+      [
+          "navUserProfile",
+          [":private_router/route", "/user"]
+      ],
+      [
+          "toggleShortcuts",
           [":nav_main_private_layout/state", "toggleDirection"]
+      ],
+      [
+          "hideShortcuts",
+          [":nav_main_private_layout/state", "hideDirection"]
       ],
       [
           "navSignout",
           [">login/flow", "logoutUser"]
+      ],
+      [
+          "navBlog",
+          [":common_router/route", "/blog"]
+      ],
+      [
+          "navDocs",
+          [":common_router/route", "/docs"]
+      ],
+      [
+          "navHelp",
+          [":common_router/route", "/support"]
       ],
       [
           "toggleMobileMenu",
@@ -203,7 +301,7 @@
       ]
     ],
     "markup": [
-      "/private/nav_main_private.html"
+      "/root/private/nav_main_private.html"
     ]
   },
   "roles": {

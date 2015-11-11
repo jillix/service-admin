@@ -1,0 +1,37 @@
+{
+  "client": {
+    "load": [],
+    "config": {
+      "templates": {
+        "layout": {
+          "to": "footer",
+          "html": "/common/footer.html",
+          "render": true
+        }
+      },
+      "defaultTemplate": "layout",
+      "domEvents": [
+        {
+          "on": "click",
+          "selector": "li",
+          "flow": "itemClick"
+        }
+      ]
+    },
+    "flow": [
+        [
+            "itemClick",
+            [":ALTR", {"data": {"url": "{event.target.href}"}}],
+            ":private_router/route"
+        ]
+    ],
+    "markup": [
+      "/common/footer.html"
+    ]
+  },
+  "name": "footer_private_layout",
+  "module": "view",
+  "roles": {
+    "*": true
+  }
+}

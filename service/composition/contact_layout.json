@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "Contact",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/common/contact.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/common/contact.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "contact_layout"
+}

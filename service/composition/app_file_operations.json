@@ -1,0 +1,50 @@
+{
+  "client": {
+    "load": ["app_notifications"],
+    "flow": [
+      [
+        "fileRead",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "force": true,
+              "save": true
+            }
+          }
+        ],
+        ":app_editor/set"
+      ],
+      [
+        "fileRead",
+        ":app_editor/undoManager.reset"
+      ],
+      [
+        "fileWritten",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "text": "File saved",
+              "type": "success"
+            }
+          }
+        ],
+        [
+          "!ALTR",
+          {
+            "data": {
+              "text": "An error occured while saving file.",
+              "type": "error"
+            }
+          }
+        ],
+        ":app_notifications/notify",
+        "!app_notifications/notify"
+      ]
+    ]
+  },
+  "roles": {"*": true},
+  "name": "app_file_operations",
+  "module": "engine-fs"
+}

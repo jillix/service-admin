@@ -1,0 +1,29 @@
+{
+  "client": {
+    "config": {
+      "title": "list organizations",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/organization/list.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/organization/list.html"
+    ],
+    "flow": [
+      [
+        "renderedDOM",
+        [":private_layout/state", "showFooter"],
+        [":private_layout/state", "displayContainer"]
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "organizations_layout"
+}

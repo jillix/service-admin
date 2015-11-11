@@ -1,0 +1,12 @@
+{
+  "client": {
+    "config": {
+      "target": ".terminal-container"
+    }
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "engine-terminal",
+  "name": "app_terminal"
+}

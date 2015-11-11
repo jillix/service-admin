@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "Docs",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/common/docs.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/common/docs.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "docs_layout"
+}

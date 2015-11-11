@@ -1,0 +1,29 @@
+{
+  "client": {
+    "config": {
+      "title": "New Billing",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/billing/new_billing.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/billing/new_billing.html"
+    ],
+    "flow": [
+      [
+        "renderedDOM",
+        [":private_layout/state", "showFooter"],
+        [":private_layout/state", "displayContainer"]
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "new_billing_layout"
+}

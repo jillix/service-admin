@@ -1,0 +1,50 @@
+{
+  "client": {
+    "config": {
+      "title": "New app",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/application/new.html"
+        }
+      },
+      "defaultTemplate": "layout",
+      "domEvents": [
+        {
+          "on": "click",
+          "element": "btnApps",
+          "flow": "btnApps"
+        },
+        {
+          "on": "click",
+          "selector": ".circle-back > a",
+          "flow": "selectApplicationTemplate"
+        }
+      ]
+    },
+    "flow": [
+        [
+            "btnApps",
+            [":private_router/route", "/apps"]
+        ],
+        [
+            "renderedDOM",
+            [":private_layout/state", "showFooter"],
+            [":private_layout/state", "displayContainer"]
+        ],
+        [
+            "selectApplicationTemplate",
+            [":ALTR", {"data": {"url": "/new/{target.attributes.0.value}"}}],
+            ":private_router/route"
+        ]
+    ],
+    "markup": [
+      "/application/new.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "new_application_layout"
+}

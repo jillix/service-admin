@@ -1,0 +1,98 @@
+{
+  "client": {
+    "load": [
+        "app_builder_filters_layout"
+    ],
+    "config": {
+      "title": "application builder",
+      "states": {
+        "toggleEditors": [{
+            "sel": "[data-element='toggle-editor']",
+            "toggle": ["active"]
+        }, {
+            "sel": ".editor-wrapper .ace_editor, .editor-wrapper .form-editor",
+            "toggle": ["hide"]
+        }]
+      },
+      "templates": {
+        "layout": {
+          "to": ".app-options > .app-builder",
+          "html": "/application/builder.html",
+          "render": true
+        }
+      },
+      "defaultTemplate": "layout",
+      "domEvents": [
+        {
+          "on": "click",
+          "element": "cancel",
+          "flow": "cancelBtnClicked"
+        },
+        {
+          "on": "click",
+          "element": "save",
+          "flow": "saveBtnClicked"
+        },
+        {
+          "on": "click",
+          "element": "toggle-editor",
+          "flow": "toggleEditorClicked"
+        }
+      ]
+    },
+    "markup": [
+      "/application/builder.html"
+    ],
+    "flow": [
+      [
+        "renderedDOM",
+        [
+          ":ALTR",
+          {
+            "set": {
+              "user": "_path.0",
+              "application": "_path.1"
+            },
+            "data": {
+              "sel": ".sidebars .sidebar[data-side='right']"
+            }
+          }
+        ],
+        ":app_builder/setApp",
+        ":app_builder/render"
+      ],
+      [
+          "renderedDOM",
+          "app_builder_editor_forms_layout/render",
+          ":app_builder_sidebar/load",
+          ":app_builder_editor/load",
+          ":app_builder_form_editor_custom/start"
+      ],
+      [
+        "saveBtnClicked",
+        [":app_builder_editor/get", { "writeToStream": true }],
+        [">app_builder_operations/flow", "writeFile"]
+      ],
+      [
+        "cancelBtnClicked",
+        ":app_builder_editor/close",
+        ":app_builder/highlight.unselectAll"
+      ],
+      [
+        "toggleEditorClicked",
+        ":app_builder_editor/get",
+        ":app_builder_form_editor_custom/editorsToggled",
+        ":app_builder_form_editor_custom/instanceSelected"
+      ],
+      [
+        "toggleEditorClicked",
+        [":state", "toggleEditors"]
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "app_builder_layout"
+}

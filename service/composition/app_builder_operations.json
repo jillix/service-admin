@@ -1,0 +1,54 @@
+{
+  "client": {
+    "flow": [
+      [
+        "fileRead",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "force": true,
+              "save": true,
+              "sel": ".sidebars .sidebar[data-side='right']"
+            }
+          }
+        ],
+        ":app_builder_editor/set",
+        ":app_builder_sidebar/open"
+      ],
+      [
+        "fileRead",
+        ":app_builder_editor/get",
+        ":app_builder_form_editor_custom/instanceSelected"
+      ],
+      [
+        "fileWritten",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "text": "File saved",
+              "type": "success",
+              "saved": true
+            }
+          }
+        ],
+        [
+          "!ALTR",
+          {
+            "data": {
+              "text": "An error occured while saving file.",
+              "type": "error"
+            }
+          }
+        ],
+        ":app_notifications/notify",
+        ":app_builder_editor/isSaved",
+        "!app_notifications/notify"
+      ]
+    ]
+  },
+  "roles": {"*": true},
+  "name": "app_builder_operations",
+  "module": "engine-fs"
+}

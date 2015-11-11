@@ -1,0 +1,29 @@
+{
+  "client": {
+    "config": {
+      "title": "New Store",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/store/new_store.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/store/new_store.html"
+    ],
+    "flow": [
+      [
+        "renderedDOM",
+        [":private_layout/state", "showFooter"],
+        [":private_layout/state", "displayContainer"]
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "new_store_layout"
+}

@@ -1,0 +1,35 @@
+{
+  "client": {
+    "config": {
+      "title": "application deploy",
+      "loader": {
+          "to": "app-options"
+      },
+      "templates": {
+        "layout": {
+          "to": ".app-options > .app-deploy",
+          "html": "/application/deploy.html",
+          "render": true
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/application/deploy.html"
+    ],
+    "styles": [
+      "/css/icono.min.css"
+    ],
+    "flow": [
+      [
+        "renderedDOM",
+        [":private_layout/state", "showFooter"]
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "app_deploy_layout"
+}

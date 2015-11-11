@@ -1,0 +1,10 @@
+{
+    "roles": {
+        "*": true
+    },
+    "client": {
+
+    },
+    "module": "engine-jq",
+    "name": "jquery"
+}

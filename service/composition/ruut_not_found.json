@@ -1,0 +1,30 @@
+{
+  "client": {
+    "config": {
+      "ruuts": [
+        "common_router",
+        "public_router",
+        "private_router"
+      ]
+    },
+    "flow": [
+      [
+        "notFound",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "clear": true
+            }
+          }
+        ],
+        "error_404_layout/render"
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "engine-ruut-not-found",
+  "name": "ruut_not_found"
+}

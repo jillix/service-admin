@@ -1,0 +1,13 @@
+{
+  "client": {
+    "config": {
+        "targetDOM": "_container",
+        "loaderClassName": "loader1"
+    }
+  },
+  "roles": {
+    "*": true
+  },
+  "name": "engine_loader",
+  "module": "engine-loader"
+}

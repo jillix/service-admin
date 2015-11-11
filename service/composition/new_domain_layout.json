@@ -1,0 +1,29 @@
+{
+  "client": {
+    "config": {
+      "title": "New Domain",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/domain/new_domain.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/domain/new_domain.html"
+    ],
+    "flow": [
+      [
+        "renderedDOM",
+        [":private_layout/state", "showFooter"],
+        [":private_layout/state", "displayContainer"]
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "new_domain_layout"
+}

@@ -1,0 +1,30 @@
+{
+  "client": {
+    "config": {
+      "title": "application dashboard",
+      "templates": {
+        "layout": {
+          "to": ".app-options > .app-dashboard",
+          "html": "/application/dashboard.html",
+          "render": true
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/application/dashboard.html"
+    ],
+    "flow": [
+      [
+          "renderedDOM",
+          [":private_layout/state", "displayContainer"],
+          [":private_layout/state", "showFooter"]
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "app_dashboard_layout"
+}

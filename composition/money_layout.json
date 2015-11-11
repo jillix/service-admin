@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "Money",
+      "templates": {
+        "layout": {
+          "to": ".pages-container",
+          "html": "/private/money.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/private/money.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "money_layout"
+}

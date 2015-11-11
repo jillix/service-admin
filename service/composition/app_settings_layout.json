@@ -1,0 +1,29 @@
+{
+  "client": {
+    "config": {
+      "title": "application settings",
+      "templates": {
+        "layout": {
+          "to": ".app-options > .app-settings",
+          "html": "/application/settings.html",
+          "render": true
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/application/settings.html"
+    ],
+    "flow": [
+      [
+        "renderedDOM",
+        [":private_layout/state", "showFooter"]
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "app_settings_layout"
+}

@@ -1,0 +1,85 @@
+{
+  "client": {
+    "config": {
+      "templates": {
+        "layout": {
+          "to": ".app-nav ul",
+          "html": "/root/private/nav_app.html",
+          "render": true
+        }
+      },
+      "defaultTemplate": "layout",
+      "domEvents": [
+        {
+          "on": "click",
+          "selector": "li",
+          "flow": "itemClick"
+        },
+        {
+            "on": "click",
+            "element": "settings",
+            "flow": "showFooter"
+        },
+        {
+            "on": "click",
+            "element": "deploy",
+            "flow": "showFooter"
+        },
+        {
+            "on": "click",
+            "element": "dashboard",
+            "flow": "showFooter"
+        },
+        {
+            "on": "click",
+            "element": "terminal",
+            "flow": "hideFooter"
+        },
+        {
+            "on": "click",
+            "element": "editor",
+            "flow": "hideFooter"
+        },
+        {
+            "on": "click",
+            "element": "builder",
+            "flow": "hideFooter"
+        }
+      ]
+    },
+    "flow": [
+      [
+        "itemClick",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "url": "{event.target.href}"
+            }
+          }
+        ],
+        ":private_router/route"
+      ],
+      [
+          "showFooter",
+          [
+              ":private_layout/state", "showFooter"
+          ]
+      ],
+      [
+          "hideFooter",
+          [
+              ":private_layout/state", "hideFooter"
+          ]
+      ]
+    ],
+    "markup": [
+      "/root/private/nav_app.html"
+    ]
+  },
+  "name": "nav_app_layout",
+  "module": "view",
+  "roles": {
+    "*": true
+  }
+}

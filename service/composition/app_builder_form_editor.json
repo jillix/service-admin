@@ -1,0 +1,12 @@
+{
+  "client": {
+    "config": {
+      "form": "form.form-editor-elm"
+    }
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "engine-form",
+  "name": "app_builder_form_editor"
+}

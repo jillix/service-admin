@@ -1,0 +1,8 @@
+{
+  "client": {
+    "flow": []
+  },
+  "roles": {"*": true},
+  "name": "app_notifications",
+  "module": "engine-notifications"
+}

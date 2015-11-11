@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "module viewer",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/module/viewer.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/module/viewer.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "app_module_viewer_layout"
+}

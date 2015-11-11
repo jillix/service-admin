@@ -1,0 +1,86 @@
+{
+    "client": {
+        "config": {
+            "container": ".app-graph",
+            "searchElement": "#app-builder-search"
+        },
+        "flow": [
+            [
+                "getComposition",
+                "api/app.comp.get"
+            ],
+            [
+                "connectElements",
+                "api/app.comp.connectElements"
+            ],
+            [
+                "getService",
+                "api/app.service.get"
+            ],
+            [
+                "setPositions",
+                "api/app.service.setPositions"
+            ],
+            [
+                "getModuleInfo",
+                "api/module.getInfo"
+            ],
+            [
+                "renderedGraph",
+                [":private_layout/state", "displayContainer"]
+            ],
+            [
+                "renderedGraph",
+                [
+                    ":ALTR",
+                    {
+                        "data": {
+                            "sel": ".sidebars .sidebar[data-side='right']"
+                        }
+                    }
+                ],
+                ":app_builder_sidebar/close"
+            ],
+            [
+                "searchElement",
+                ":searchElement"
+            ],
+            [
+                "elementSelected",
+                [
+                    ":ALTR",
+                    {
+                        "data": {
+                          "path": "{_path.1}/composition/{instance}.json"
+                        }
+                    }
+                ],
+                [">app_builder_operations/flow", "readFile"]
+            ],
+            [
+                "elementSelected",
+                ":app_builder_form_editor_custom/afterInstanceClick"
+            ],
+            [
+                "elementSelected",
+                [
+                    ":ALTR",
+                    {
+                        "data": {
+                            "sel": ".active-instance-name",
+                            "text": "{instance}"
+                        }
+                    }
+                ],
+                ":jquery/text"
+            ]
+        ]
+    },
+    "roles": {
+        "*": true
+    },
+    "flow": [
+    ],
+    "module": "builder",
+    "name": "app_builder"
+}

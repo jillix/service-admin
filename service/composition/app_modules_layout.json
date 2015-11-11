@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "module list",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/module/list.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/module/list.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "app_modules_layout"
+}

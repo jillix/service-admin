@@ -1,0 +1,70 @@
+{
+  "client": {
+    "config": {
+      "shortcuts": [
+        {
+          "k": 66,
+          "c": "ctrl",
+          "args": [
+            "_toggle_term"
+          ]
+        },
+        {
+          "k": 27,
+          "args": [
+            "_close_sidebars"
+          ]
+        },
+        {
+          "k": 77,
+          "c": "ctrl",
+          "args": [
+            "_toggle_file_tree"
+          ]
+        }
+      ]
+    },
+    "flow": [
+      [
+        "_toggle_term",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "sel": ".file-editor .sidebar[data-side='bottom']"
+            }
+          }
+        ],
+        ":app_editor_sidebar/toggle"
+      ],
+      [
+        "_close_sidebars",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "sel": ".file-editor .sidebar"
+            }
+          }
+        ],
+        ":app_editor_sidebar/close"
+      ],
+      [
+        "_toggle_file_tree",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "sel": ".file-editor .sidebar[data-side='right']"
+            }
+          }
+        ],
+        ":app_editor_sidebar/toggle"
+      ]
+    ],
+    "load": []
+  },
+  "roles": {"*": true},
+  "name": "app_editor_global_keypress",
+  "module": "engine-keypress"
+}

@@ -4,14 +4,9 @@
             "routes": [
                 "private_homepage",
                 {
-                    "documentation": "documentation",
-                    "tutorials": "tutorials",
-                    "support": "support",
-                    "contact": "contact",
-                    "about": "about",
-                    "blog": "blog",
-                    "terms": "terms",
-                    "privacy": "privacy"
+                    "money": "money",
+                    "infrastructure": "infrastructure",
+                    "user-management": "user-management"
                 }
             ],
             "customData": {
@@ -20,41 +15,40 @@
         },
         "flow": [
             [
+                "add_active_class",
+                [
+                    ":ALTR",
+                    {
+                        "data": {
+                            "selector": ".navigation-menu [data-element='{_path.0}']"
+                        }
+                    }
+                ],
+                [":nav_main_private_layout/state", "nav"]
+            ],
+            [
                 "private_homepage",
-                "private_homepage_layout/render"
+                "money_layout/render",
+                ["flow", "add_active_class"]
             ],
             [
-                "documentation",
-                "documentation_layout/render"
+                "money",
+                "money_layout/render",
+                ["flow", "add_active_class"]
+
             ],
             [
-                "tutorials",
-                "tutorials_layout/render"
+                "infrastructure",
+                "infrastructure_layout/render",
+                ["flow", "add_active_class"]
+
             ],
             [
-                "support",
-                "support_layout/render"
-            ],
-            [
-                "contact",
-                "contact_layout/render"
-            ],
-            [
-                "about",
-                "about_layout/render"
-            ],
-            [
-                "blog",
-                "blog_layout/render"
-            ],
-            [
-                "terms",
-                "terms_layout/render"
-            ],
-            [
-                "privacy",
-                "privacy_layout/render"
+                "user-management",
+                "user-management_layout/render",
+                ["flow", "add_active_class"]
             ]
+
         ]
     },
     "roles": {

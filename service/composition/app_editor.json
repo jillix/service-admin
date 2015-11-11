@@ -1,0 +1,24 @@
+{
+    "config": {},
+    "client": {
+        "load": ["app_file_operations"],
+        "config": {
+            "theme": "textmate",
+            "editor": ".file-editor .ace-editor",
+            "font_size": 13
+        },
+        "flow": [
+            [
+                "save",
+                [">app_file_operations/flow", "writeFile"]
+            ],
+            [
+                "renderedEditor",
+                [":private_layout/state", "displayContainer"]
+            ]
+        ]
+    },
+    "roles": {"*": true},
+    "name": "app_editor",
+    "module": "engine-editor"
+}

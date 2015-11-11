@@ -1,0 +1,11 @@
+{
+  "client": {
+    "config": {
+      "selector": ".sidebars .sidebar"
+    },
+    "flow": []
+  },
+  "roles": {"*": true},
+  "name": "app_builder_sidebar",
+  "module": "engine-sidebar"
+}

@@ -1,0 +1,369 @@
+{
+  "client": {
+    "config": {
+      "routes": [
+        "apps",
+        {
+          "apps": "apps",
+          "new": [
+              "new",
+              {
+                  ":application-name": "new_application",
+                  "clone-git-repo": "clone_git_repo"
+              }
+          ],
+          "new-form": "new_form",
+          "domains": [
+            "domains",
+            {
+                "new": "new_domain",
+                ":domain-name": "specific_domain"
+            }
+          ],
+          "projects": [
+              "projects",
+              {
+                  "new": "new_project",
+                  ":project-name": "specific_project"
+              }
+          ],
+          "organizations": [
+              "organizations",
+              {
+                  "new": "new_organization",
+                  ":organization-name": "specific_organization"
+              }
+          ],
+          "billings": [
+              "billings",
+              {
+                  "new": "new_billing",
+                  ":billing-name": "specific_billing"
+              }
+          ],
+          "stores": [
+              "stores",
+              {
+                  "new": "new_store",
+                  ":store-name": "specific_store"
+              }
+          ],
+          "settings": {
+            "profile": "user_profile_settings",
+            "account": "account_settings"
+          },
+          ":user": [
+            "user_profile",
+            {
+              ":app": [
+                "app_dashboard",
+                {
+                  "build": "app_builder",
+                  "terminal": "app_terminal",
+                  "deploy": "app_deploy",
+                  "settings": "app_settings",
+                  "dashboard": "app_dashboard",
+                  "editor": [
+                    "app_editor",
+                    {},
+                    "app_editor"
+                  ],
+                  "modules": "app_modules",
+                  "module": {
+                    ":module": [
+                      "app_module_viewer",
+                      {
+                        "editor": [
+                          "app_module_editor",
+                          {},
+                          "app_module_editor"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "customData": {
+        "clear": true
+      }
+    },
+    "flow": [
+        [
+            "add_active_class",
+            [
+                ":ALTR",
+                {
+                    "data": {
+                        "selector": ".navigation-menu [data-element='{_path.0}']"
+                    }
+                }
+            ],
+            [":nav_main_private_layout/state", "nav"]
+        ],
+        [
+            "apps",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            [":nav_main_private_layout/state", "hideNavigationMenu"],
+            "user_applications_layout/render",
+            ["flow", "add_active_class"]
+        ],
+        [
+            "new",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            [":nav_main_private_layout/state", "hideNavigationMenu"],
+            "new_application_layout/render"
+        ],
+        [
+            "new_form",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            [":nav_main_private_layout/state", "hideNavigationMenu"],
+            "new_application_form_layout/render",
+            ["flow", "add_active_class"]
+        ],
+        [
+            "domains",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            [":nav_main_private_layout/state", "hideNavigationMenu"],
+            "domains_layout/render",
+            ["flow", "add_active_class"]
+        ],
+        [
+            "specific_domain",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            [":nav_main_private_layout/state", "hideNavigationMenu"],
+            "specific_domain_layout/render",
+            ["flow", "add_active_class"]
+        ],
+        [
+            "new_domain",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            [":nav_main_private_layout/state", "hideNavigationMenu"],
+            "new_domain_layout/render",
+            ["flow", "add_active_class"]
+        ],
+        [
+            "projects",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            [":nav_main_private_layout/state", "hideNavigationMenu"],
+            "projects_layout/render",
+            ["flow", "add_active_class"]
+
+        ],
+        [
+            "specific_project",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            [":nav_main_private_layout/state", "hideNavigationMenu"],
+            "specific_project_layout/render",
+            ["flow", "add_active_class"]
+        ],
+        [
+            "new_project",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            [":nav_main_private_layout/state", "hideNavigationMenu"],
+            "new_project_layout/render",
+            ["flow", "add_active_class"]
+        ],
+        [
+            "organizations",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            [":nav_main_private_layout/state", "hideNavigationMenu"],
+            "organizations_layout/render",
+            ["flow", "add_active_class"]
+        ],
+        [
+            "specific_organization",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            [":nav_main_private_layout/state", "hideNavigationMenu"],
+            "specific_organization_layout/render",
+            ["flow", "add_active_class"]
+        ],
+        [
+            "new_organization",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            [":nav_main_private_layout/state", "hideNavigationMenu"],
+            "new_organization_layout/render",
+            ["flow", "add_active_class"]
+        ],
+        [
+            "billings",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            [":nav_main_private_layout/state", "hideNavigationMenu"],
+            "billings_layout/render",
+            ["flow", "add_active_class"]
+        ],
+        [
+            "specific_billing",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            [":nav_main_private_layout/state", "hideNavigationMenu"],
+            "specific_billing_layout/render",
+            ["flow", "add_active_class"]
+        ],
+        [
+            "new_billing",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            [":nav_main_private_layout/state", "hideNavigationMenu"],
+            "new_billing_layout/render",
+            ["flow", "add_active_class"]
+        ],
+        [
+            "stores",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            [":nav_main_private_layout/state", "hideNavigationMenu"],
+            "stores_layout/render",
+            ["flow", "add_active_class"]
+        ],
+        [
+            "specific_store",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            [":nav_main_private_layout/state", "hideNavigationMenu"],
+            "specific_store_layout/render",
+            ["flow", "add_active_class"]
+        ],
+        [
+            "new_store",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            [":nav_main_private_layout/state", "hideNavigationMenu"],
+            "new_store_layout/render",
+            ["flow", "add_active_class"]
+        ],
+        [
+            "account_settings",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            "account_settings_layout/render"
+        ],
+        [
+            "user_profile_settings",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            "user_profile_settings_layout/render"
+        ],
+        [
+            "user_password",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            "user_password_layout/render"
+        ],
+        [
+            "user_username",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            "user_username_layout/render"
+        ],
+        [
+            "user_email",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            "user_email_layout/render"
+        ],
+        [
+            "user_delete_account",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            "user_delete_account_layout/render"
+        ],
+        [
+            "user_profile",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            "user_profile_layout/render"
+        ],
+        [
+            "app_builder",
+            [":private_layout/state", "customNav"],
+            [":app_options_layout/state", "customAppOptions"],
+            ["app_options_layout/flow", "app_builder"]
+        ],
+        [
+            "app_terminal",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            ["app_options_layout/flow", "app_terminal"]
+        ],
+        [
+            "app_dashboard",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            ["app_options_layout/flow", "app_dashboard"]
+        ],
+        [
+            "app_deploy",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            ["app_options_layout/flow", "app_deploy"]
+        ],
+        [
+            "app_settings",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            ["app_options_layout/flow", "app_settings"]
+        ],
+        [
+            "app_editor",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            ["app_options_layout/flow", "app_editor"]
+        ],
+        [
+            "app_modules",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            "app_modules_layout/render"
+        ],
+        [
+            "app_module_viewer",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            "app_module_viewer_layout/render"
+        ],
+        [
+            "app_module_editor",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            "app_module_editor_layout/render"
+        ],
+        [
+            "new_application",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            "new_application_form_layout/render",
+            [":new_application_form_layout/state", "showInstructions"]
+        ],
+        [
+            "clone_git_repo",
+            [":private_layout/state", "resetCustomNav"],
+            [":app_options_layout/state", "resetCustomAppOptions"],
+            "new_application_form_layout/render",
+            [":new_application_form_layout/state", "showGitRepo"],
+            [":new_application_form_layout/state", "showInstructionsGitRepo"]
+        ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "engine-ruut",
+  "name": "private_router"
+}

@@ -1,0 +1,202 @@
+{
+  "client": {
+    "config": {
+      "title": "Project",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/domain/specific_domain.html"
+        }
+      },
+      "defaultTemplate": "layout",
+      "states": {
+          "toggleAdvOptions": [
+              {
+                  "sel": ".option span",
+                  "toggle": ["hide"]
+              },
+              {
+                  "sel": ".adv-container",
+                  "toggle": ["hide"]
+              }
+          ],
+          "enableEditA": [
+              {
+                  "sel": ".a-records .not-edit",
+                  "toggle": ["hide"]
+              },
+              {
+                  "sel": ".a-records .to-edit",
+                  "toggle": ["hide"]
+              },
+              {
+                  "sel": ".editA",
+                  "toggle": ["hide"]
+              },
+              {
+                  "sel": ".saveA",
+                  "toggle": ["hide"]
+              },
+              {
+                  "sel": ".cancelA",
+                  "toggle": ["hide"]
+              }
+          ],
+          "enableEditMx": [
+              {
+                  "sel": ".mx-records .not-edit",
+                  "toggle": ["hide"]
+              },
+              {
+                  "sel": ".mx-records .to-edit",
+                  "toggle": ["hide"]
+              },
+              {
+                  "sel": ".editMx",
+                  "toggle": ["hide"]
+              },
+              {
+                  "sel": ".saveMx",
+                  "toggle": ["hide"]
+              },
+              {
+                  "sel": ".cancelMx",
+                  "toggle": ["hide"]
+              }
+          ],
+          "enableEditC": [
+              {
+                  "sel": ".c-records .not-edit",
+                  "toggle": ["hide"]
+              },
+              {
+                  "sel": ".c-records .to-edit",
+                  "toggle": ["hide"]
+              },
+              {
+                  "sel": ".editC",
+                  "toggle": ["hide"]
+              },
+              {
+                  "sel": ".saveC",
+                  "toggle": ["hide"]
+              },
+              {
+                  "sel": ".cancelC",
+                  "toggle": ["hide"]
+              }
+          ],
+          "enableEditTxt": [
+              {
+                  "sel": ".txt-records .not-edit",
+                  "toggle": ["hide"]
+              },
+              {
+                  "sel": ".txt-records .to-edit",
+                  "toggle": ["hide"]
+              },
+              {
+                  "sel": ".editTxt",
+                  "toggle": ["hide"]
+              },
+              {
+                  "sel": ".saveTxt",
+                  "toggle": ["hide"]
+              },
+              {
+                  "sel": ".cancelTxt",
+                  "toggle": ["hide"]
+              }
+          ]
+      },
+      "domEvents": [
+          {
+              "on": "click",
+              "selector": ".option",
+              "flow": "toggleArrow"
+          },
+          {
+              "on": "click",
+              "selector": ".editA",
+              "flow": "enableEditA"
+          },
+          {
+              "on": "click",
+              "selector": ".cancelA",
+              "flow": "cancelA"
+          },
+          {
+              "on": "click",
+              "selector": ".editMx",
+              "flow": "enableEditMx"
+          },
+          {
+              "on": "click",
+              "selector": ".cancelMx",
+              "flow": "enableEditMx"
+          },
+          {
+              "on": "click",
+              "selector": ".editC",
+              "flow": "enableEditC"
+          },
+          {
+              "on": "click",
+              "selector": ".cancelC",
+              "flow": "enableEditC"
+          },
+          {
+              "on": "click",
+              "selector": ".editTxt",
+              "flow": "enableEditTxt"
+          },
+          {
+              "on": "click",
+              "selector": ".cancelTxt",
+              "flow": "enableEditTxt"
+          }
+
+      ]
+    },
+    "markup": [
+      "/domain/specific_domain.html"
+    ],
+    "flow": [
+      [
+        "renderedDOM",
+        [":private_layout/state", "showFooter"],
+        [":private_layout/state", "displayContainer"]
+      ],
+      [
+          "toggleArrow",
+          [":state", "toggleAdvOptions"]
+      ],
+      [
+          "enableEditA",
+          [":state", "enableEditA"]
+      ],
+      [
+          "cancelA",
+          [":state", "enableEditA"]
+      ],
+      [
+          "enableEditMx",
+          [":state", "enableEditMx"]
+      ],
+      [
+          "enableEditC",
+          [":state", "enableEditC"]
+      ],
+      [
+          "enableEditTxt",
+          [":state", "enableEditTxt"]
+      ]
+
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "specific_domain_layout"
+}

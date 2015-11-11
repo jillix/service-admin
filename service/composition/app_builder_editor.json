@@ -1,0 +1,42 @@
+{
+    "client": {
+        "config": {
+            "theme": "textmate",
+            "editor": ".sidebar .editor-wrapper .editor",
+            "font_size": 13
+        },
+        "flow": [
+            [
+                "renderedEditor",
+                [
+                    ":ALTR",
+                    {
+                        "data": {
+                            "mode": "json"
+                        }
+                    }
+                ],
+                ":app_builder_editor/setMode"
+            ],
+            [
+                "save",
+                [">app_builder_operations/flow", "writeFile"]
+            ],
+            [
+                "readyToClose",
+                [
+                    ":ALTR",
+                    {
+                        "data": {
+                            "sel": ".sidebars .sidebar[data-side='right']"
+                        }
+                    }
+                ],
+                ":app_builder_sidebar/close"
+            ]
+        ]
+    },
+    "roles": {"*": true},
+    "name": "app_builder_editor",
+    "module": "engine-editor"
+}

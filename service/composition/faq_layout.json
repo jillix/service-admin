@@ -1,0 +1,28 @@
+{
+  "client": {
+    "config": {
+      "title": "FAQ",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/common/faq.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/common/faq.html"
+    ],
+    "flow": [
+        [
+            "renderedDOM",
+            [":public_layout/state", "displayContainer"]
+        ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "faq_layout"
+}

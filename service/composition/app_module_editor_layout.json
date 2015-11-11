@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "module editor",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/module/editor.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/module/editor.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "app_module_editor_layout"
+}

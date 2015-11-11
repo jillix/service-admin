@@ -1,0 +1,29 @@
+{
+  "client": {
+    "config": {
+      "title": "New Project",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/project/new_project.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/project/new_project.html"
+    ],
+    "flow": [
+      [
+        "renderedDOM",
+        [":private_layout/state", "showFooter"],
+        [":private_layout/state", "displayContainer"]
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "new_project_layout"
+}

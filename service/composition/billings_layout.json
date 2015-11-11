@@ -1,0 +1,29 @@
+{
+  "client": {
+    "config": {
+      "title": "list billings",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/billing/list.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/billing/list.html"
+    ],
+    "flow": [
+      [
+        "renderedDOM",
+        [":private_layout/state", "showFooter"],
+        [":private_layout/state", "displayContainer"]
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "billings_layout"
+}

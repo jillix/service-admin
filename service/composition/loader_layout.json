@@ -1,0 +1,23 @@
+{
+  "client": {
+    "config": {
+      "title": "Loading",
+      "templates": {
+        "layout": {
+            "to": "._container",
+            "html": "/common/loader.html",
+            "render": true
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/common/loader.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "loader_layout"
+}

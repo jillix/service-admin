@@ -1,0 +1,28 @@
+{
+  "client": {
+    "config": {
+      "title": "Pricing",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/common/price.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/common/price.html"
+    ],
+    "flow": [
+        [
+            "renderedDOM",
+            [":public_layout/state", "displayContainer"]
+        ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "pricing_layout"
+}

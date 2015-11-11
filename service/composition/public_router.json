@@ -1,0 +1,87 @@
+{
+    "client": {
+        "config": {
+            "routes": [
+                "public_homepage",
+                {
+                    "signin": "signin",
+                    "signup": "signup",
+                    "forgot": "forgot",
+                    "reset": "reset",
+                    "faq": "faq",
+                    "features": "features",
+                    "pricing": "pricing"
+                }
+            ],
+            "customData": {
+                "clear": true
+            }
+        },
+        "flow": [
+            [
+                "add_active_class",
+                [
+                    ":ALTR",
+                    {
+                        "data": {
+                            "selector": ".public-nav-ul [data-element='{_path.0}']"
+                        }
+                    }
+                ],
+                [":nav_main_public_layout/state", "nav"]
+            ],
+            [
+                "remove_active_classes",
+                [
+                    ":ALTR",
+                    {
+                        "data": {
+                            "selector": "[data-element={_path.0}]"
+                        }
+                    }
+                ],
+                [":nav_main_public_layout/state", "resetNav"]
+            ],
+            [
+                "public_homepage",
+                "public_homepage_layout/render",
+                ["flow", "remove_active_classes"]
+            ],
+            [
+                "signup",
+                "signup_layout/render",
+                ["flow", "add_active_class"]
+            ],
+            [
+                "signin",
+                "signin_layout/render",
+                ["flow", "add_active_class"]
+            ],
+            [
+                "reset",
+                "reset_password_layout/render",
+                ["flow", "add_active_class"]
+            ],
+            [
+                "faq",
+                "faq_layout/render",
+                ["flow", "add_active_class"]
+            ],
+            [
+                "features",
+                "features_layout/render",
+                ["flow", "add_active_class"]
+            ],
+            [
+                "pricing",
+                "pricing_layout/render",
+                ["flow", "add_active_class"]
+            ]
+        ]
+    },
+    "roles": {
+        "*": true
+    },
+    "module": "engine-ruut",
+    "name": "public_router"
+}

@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "Support",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/common/support.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/common/support.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "support_layout"
+}

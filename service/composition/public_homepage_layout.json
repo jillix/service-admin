@@ -1,0 +1,28 @@
+{
+  "client": {
+    "config": {
+      "title": "jillix Service",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/root/public/homepage.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/root/public/homepage.html"
+    ],
+    "flow": [
+        [
+            "renderedDOM",
+            [":public_layout/state", "displayContainer"]
+        ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "public_homepage_layout"
+}

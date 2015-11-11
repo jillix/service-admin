@@ -1,0 +1,67 @@
+{
+    "client": {
+        "config": {
+            "title": "New app",
+            "templates": {
+                "layout": {
+                    "to": "._container",
+                    "html": "/application/new_form.html"
+                }
+            },
+            "defaultTemplate": "layout",
+            "states": {
+                "showGitRepo": [
+                    {
+                        "sel": "div[data-element='git-repo']",
+                        "rm": [
+                            "hide"
+                        ]
+                    }
+                ],
+                "showInstructions": [
+                    {
+                        "sel": ".instructions",
+                        "rm": [
+                            "hide"
+                        ]
+                    }
+                ],
+                "showInstructionsGitRepo": [
+                    {
+                        "sel": ".instructions-git-repo",
+                        "rm": [
+                            "hide"
+                        ]
+                    }
+                ]
+            },
+            "domEvents": [
+                {
+                    "on": "click",
+                    "element": "cancelCreatingApp",
+                    "flow": "toApps"
+                }
+
+            ]
+        },
+        "flow": [
+            [
+                "renderedDOM",
+                [":private_layout/state", "showFooter"],
+                [":private_layout/state", "displayContainer"]
+            ],
+            [
+                "toApps",
+                [":private_router/route", "/new"]
+            ]
+        ],
+        "markup": [
+            "/application/new_form.html"
+        ]
+    },
+    "roles": {
+        "*": true
+    },
+    "module": "view",
+    "name": "new_application_form_layout"
+}

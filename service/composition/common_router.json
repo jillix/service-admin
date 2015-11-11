@@ -1,0 +1,43 @@
+{
+  "client": {
+    "config": {
+      "routes": {
+        "blog": "blog",
+        "faq": "faq",
+        "support": "support",
+        "contact": "contact",
+        "docs": "docs"
+      },
+      "customData": {
+        "clear": true
+      }
+    },
+    "flow": [
+      [
+        "blog",
+        "blog_layout/render"
+      ],
+      [
+        "faq",
+        "faq_layout/render"
+      ],
+      [
+        "support",
+        "support_layout/render"
+      ],
+      [
+        "contact",
+        "contact_layout/render"
+      ],
+      [
+        "docs",
+        "docs_layout/render"
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "engine-ruut",
+  "name": "common_router"
+}

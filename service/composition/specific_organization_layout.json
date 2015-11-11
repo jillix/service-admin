@@ -1,0 +1,29 @@
+{
+  "client": {
+    "config": {
+      "title": "Project",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/organization/specific_organization.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/organization/specific_organization.html"
+    ],
+    "flow": [
+      [
+        "renderedDOM",
+        [":private_layout/state", "showFooter"],
+        [":private_layout/state", "displayContainer"]
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "specific_organization_layout"
+}

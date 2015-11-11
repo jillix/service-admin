@@ -1,0 +1,42 @@
+{
+  "client": {
+    "config": {
+      "templates": {
+        "layout": {
+          "to": "#settings-nav ul",
+          "html": "/user/settings_nav.html"
+        }
+      },
+      "defaultTemplate": "layout",
+      "domEvents": [
+        {
+          "on": "click",
+          "selector": "li",
+          "flow": "itemClick"
+        }
+      ]
+    },
+    "flow": [
+      [
+        "itemClick",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "url": "{event.target.href}"
+            }
+          }
+        ],
+        ":private_router/route"
+      ]
+    ],
+    "markup": [
+      "/user/settings_nav.html"
+    ]
+  },
+  "name": "nav_user_settings_layout",
+  "module": "view",
+  "roles": {
+    "*": true
+  }
+}

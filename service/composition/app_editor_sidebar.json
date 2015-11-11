@@ -1,0 +1,14 @@
+{
+  "client": {
+    "load": [
+      "app_editor_global_keypress"
+    ],
+    "config": {
+      "selector": ".file-editor .sidebar"
+    },
+    "flow": []
+  },
+  "roles": {"*": true},
+  "name": "app_editor_sidebar",
+  "module": "engine-sidebar"
+}

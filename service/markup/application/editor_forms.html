@@ -1,0 +1,67 @@
+<div class="section-content">
+    <form class="form-editor-elm">
+        <div class="row form-input">
+            <div class="col-xs-3 col-md-2 title">Name:</div>
+            <div class="col-xs-9 col-md-10">
+                <input data-field="name" value="app_builder"></div>
+        </div>
+        <div class="module-field">
+            <div class="module-string">
+                <div class="row form-input">
+                    <div class="col-xs-3 col-md-2 title">Module:</div>
+                    <div class="col-xs-9 col-md-10">
+                        <input data-field="module" value="builder">
+                    </div>
+                </div>
+            </div>
+            <div class="module-object">
+                Currently cannot edit custom module configs.
+            </div>
+        </div>
+
+        <div class="row form-input mt-m">
+            <div class="col-xs-12 col-md-2 title">Roles:</div>
+            <div class="col-xs-12 col-md-10">
+                <div class="custom-table-1">
+                    <!-- This will be generated with json-editor -->
+                    <div class="row table-row">
+                        <div class="column-1 col-xs-6">Name</div>
+                        <div class="column-2 col-xs-6">Access</div>
+                    </div>
+                    <div class="row table-row">
+                        <div class="column-1 col-xs-6">*</div>
+                        <div class="column-2 col-xs-6">true</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row form-input mt-m">
+            <div class="col-xs-12 col-md-2 title">Config:</div>
+            <div class="col-xs-12 col-md-10">
+                <textarea data-field="config" data-convert-to="json"></textarea>
+            </div>
+        </div>
+
+        <div class="row form-input mt-m">
+            <div class="col-xs-12 col-md-2 title">Flow:</div>
+            <div class="col-xs-12 col-md-10">
+                <textarea data-field="flow" data-convert-to="json"></textarea>
+            </div>
+        </div>
+
+        <div class="row form-input mt-m" data-specific-to="client">
+            <div class="col-xs-12 col-md-2 title">Styles:</div>
+            <div class="col-xs-12 col-md-10">
+                <textarea data-field="styles" data-convert-to="json"></textarea>
+            </div>
+        </div>
+
+        <div class="row form-input mt-m" data-specific-to="client">
+            <div class="col-xs-12 col-md-2 title">Markup:</div>
+            <div class="col-xs-12 col-md-10">
+                <textarea data-field="markup" data-convert-to="json"></textarea>
+            </div>
+        </div>
+    </form>
+</div>

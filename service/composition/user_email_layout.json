@@ -1,0 +1,41 @@
+{
+  "client": {
+    "config": {
+      "title": "User settings",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/user/user_email.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/user/user_email.html"
+    ],
+    "flow": [
+      [
+        "renderedDOM",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "clear": false
+            }
+          }
+        ],
+        "nav_user_settings_layout/render"
+      ],
+      [
+        "renderedDOM",
+        [":private_layout/state", "showFooter"],
+        [":private_layout/state", "displayContainer"]
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "user_email_layout"
+}

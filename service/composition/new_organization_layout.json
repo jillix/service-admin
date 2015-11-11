@@ -1,0 +1,29 @@
+{
+  "client": {
+    "config": {
+      "title": "New Organization",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/organization/new_organization.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/organization/new_organization.html"
+    ],
+    "flow": [
+      [
+        "renderedDOM",
+        [":private_layout/state", "showFooter"],
+        [":private_layout/state", "displayContainer"]
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "new_organization_layout"
+}

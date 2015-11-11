@@ -1,0 +1,81 @@
+{
+  "client": {
+    "load": [
+      "private_router",
+      "common_router",
+      "ruut_not_found",
+      "nav_main_private_layout",
+      "footer_private_layout"
+    ],
+    "config": {
+      "templates": {
+        "layout": {
+          "to": "body",
+          "html": "/root/private/layout_private.html",
+          "render": true
+        }
+      },
+      "defaultTemplate": "layout",
+      "states": {
+        "showFooter": [{
+            "sel": "footer",
+            "rm": ["hide"]
+        }],
+        "hideFooter": [{
+            "sel": "footer",
+            "add": ["hide"]
+        }],
+        "showLoader": [{
+            "sel": ".page-loader",
+            "rm": ["hide"]
+        }],
+        "hideLoader": [{
+            "sel": ".page-loader",
+            "add": ["hide"]
+        }],
+        "showContainer": [{
+            "sel": "._container",
+            "rm": ["hide"]
+        }],
+        "hideContainer": [{
+            "sel": "._container",
+            "add": ["hide"]
+        }],
+        "displayLoader": [{
+            "states": [
+                "showLoader",
+                "hideContainer"
+            ]
+        }],
+        "displayContainer": [{
+            "states": [
+                "hideLoader",
+                "showContainer"
+            ]
+        }],
+        "resetCustomNav": [{
+            "sel": "nav",
+            "rm": ["fullscreen-nav"]
+        }],
+        "customNav": [{
+            "sel": "nav",
+            "add": ["fullscreen-nav"]
+        }]
+      }
+    },
+    "markup": [
+      "/root/private/layout_private.html"
+    ],
+    "styles": [
+      "/css/flexboxgrid.css",
+      "/css/private.css",
+      "/css/style.css",
+      "/octicons/octicons.css"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "private_layout"
+}

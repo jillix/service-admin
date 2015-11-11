@@ -1,0 +1,29 @@
+{
+  "client": {
+    "config": {
+      "title": "User profile",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/user/profile.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/user/profile.html"
+    ],
+    "flow": [
+      [
+        "renderedDOM",
+        [":private_layout/state", "showFooter"],
+        [":private_layout/state", "displayContainer"]
+      ]
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "user_profile_layout"
+}

@@ -1,0 +1,120 @@
+{
+  "config": {},
+  "load": [],
+  "client": {
+    "config": {
+      "container": ".file-editor .file-tree"
+    },
+    "flow": [
+      [
+        "fileSelected",
+        [
+          ":ALTR", 
+          {
+            "data": {
+              "path": "{_path.1}{selectedFile}"
+            }
+          }
+        ],
+        ":app_editor/setMode"
+      ],
+      [
+        "fileSelected",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "path": "{_path.1}{selectedFile}"
+            }
+          }
+        ],
+        [">app_file_operations/flow", "readFile"]
+      ],
+      [
+        "folderSelected",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "content": "",
+              "force": true,
+              "save": true
+            }
+          }
+        ],
+        ":app_editor/set"
+      ],
+      [
+        "treeRefreshed",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "content": "",
+              "force": true,
+              "save": true
+            }
+          }
+        ],
+        ":app_editor/set"
+      ],
+      [
+        "pathChanged",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "noEmit": true,
+              "url": "/{_path.0}/{_path.1}/{_path.2}{selectedFile}"
+            }
+          }
+        ],
+        ":private_router/route"
+      ],
+      [
+        "loaded",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "sel": ".file-editor .sidebar[data-side='right']"
+            }
+          }
+        ],
+        ":app_editor_sidebar/open",
+        ":app_file_tree/openPath"
+      ],
+      [
+        "beforeSelect",
+        ":app_editor/close"
+      ],
+      [
+        "nodeOpened",
+        [
+          ":ALTR",
+          {
+            "set": {
+              "_path": "_path"
+            }
+          }
+        ],
+        ":app_editor_custom/updateFileTreeLinks"
+      ],
+      [
+        "error",
+        [
+          ":ALTR",
+          {
+            "data": {
+              "type": "error"
+            }
+          }
+        ],
+        ":app_notifications/notify"
+      ]
+    ]
+  },
+  "roles": {"*": true},
+  "name": "app_file_tree",
+  "module": "engine-tree"
+}

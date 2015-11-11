@@ -1,0 +1,7 @@
+{
+  "name": "api",
+  "module": "service-api",
+  "roles": {
+    "*": true
+  }
+}

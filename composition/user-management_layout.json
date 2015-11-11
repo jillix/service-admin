@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "User management",
+      "templates": {
+        "layout": {
+          "to": ".pages-container",
+          "html": "/private/user-management.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/private/user-management.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "user-management_layout"
+}
