@@ -1,31 +1,60 @@
 <div class="container-fluid">
     <div class="row private-nav align-i-center">
-        <div class="col-xs-12 col-sm-2 logo-col">
-            <ul class="logo-ul">
-                <li data-element="admin-logo"><a>Service Administration</a></li>
-            </ul>
+        <div class="col-xs-12 col-sm-1 logo-col">
+            <div class="private-logo">
+                <img data-element="jillix-logo" class="jillix-logo" src="/!/images/jillix-logo.svg" alt="">
+            </div>
         </div>
-        <div class="col-xs-12 col-sm-9 first-col">
-            <ul class="nav-toggle-btn mb-0 pl-0">
+        <div class="col-xs-12 col-sm-4 first-col">
+            <ul class="nav-toggle-btn pl-0">
                 <li class="toggle-main-nav text-right">
                     <img class="menu-icon" src="/!/images/menu.svg" alt="">
                 </li>
             </ul>
             <ul class="collapsable-nav-1">
-                <li data-element="documentation"><a> Documentation</a></li>
-                <li data-element="tutorials"><a> Tutorials</a></li>
-                <li data-element="support"><a>Support</a></li>
-                <li data-element="contact"><a>Contact</a></li>
-                <li data-element="about"><a>About</a></li>
-                <li data-element="blog"><a>Blog</a></li>
-                <li data-element="terms"><a>Terms</a></li>
-                <li data-element="privacy"><a>Privacy</a></li>
             </ul>
         </div>
-        <div class="col-xs-12 col-sm-1 second-col">
+        <div class="col-xs-12 col-sm-7 second-col">
             <ul class="collapsable-nav-2">
-                <li class="li-icon" data-element="signout"><a><div class="svg-signout"></div></a></li>
+                <li data-element="blog"><a>Blog</a></li>
+                <li data-element="docs"><a>Docs</a></li>
+                <li class="li-icon dropdown" data-element="dropdown">
+                    <a>
+                        <div class="svg-account"></div>
+                    </a>
+                </li>
+
+                <li data-element="account-settings" class="dropped"><a>Account Settings</a></li>
+                <li data-element="profile-settings" class="dropped"><a>Profile Settings</a></li>
+                <li data-element="signout" class="dropped"><a>Logout</a></li>
+
+                <div class="direction-arrow hide"></div>
+                <div class="direction-toggle hide">
+                    <a data-element="account-settings">Account Settings</a>
+                    <a data-element="profile-settings">Profile Settings</a>
+                    <a data-element="signout">Logout</a>
+                </div>
             </ul>
         </div>
+    </div>
+    <div class="row">
+        <ul class="navigation-menu">
+            <div class="active-visible">
+                <li data-element="apps"><a>Applications</a></li>
+                <li data-element="projects" class="hide"><a>Projects</a></li>
+                <li data-element="stores" class="hide"><a>Stores</a></li>
+                <li data-element="domains" class="hide"><a>Domains</a></li>
+                <li data-element="organizations" class="hide"><a>Organizations</a></li>
+                <li data-element="billings" class="hide"><a>Billings</a></li>
+            </div>
+            <div class="hide navigation-menu-hidden">
+                <li data-element="apps"><a>Applications</a></li>
+                <li data-element="projects"><a>Projects</a></li>
+                <li data-element="stores"><a>Stores</a></li>
+                <li data-element="domains"><a>Domains</a></li>
+                <li data-element="organizations"><a>Organizations</a></li>
+                <li data-element="billings"><a>Billings</a></li>
+            </div>
+        </ul>
     </div>
 </div>
