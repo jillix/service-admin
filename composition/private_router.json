@@ -43,7 +43,7 @@
             ],
             [
                 "invoices",
-                "money_options_layout/render",
+                "invoices_layout/render",
                 [":money_options_layout/state", "invoices"],
                 ["flow", "add_active_class"]
             ],
