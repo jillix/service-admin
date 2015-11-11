@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "You're in the wrong place.",
+      "templates": {
+        "layout": {
+          "to": "._container",
+          "html": "/errors/404.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/errors/404.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "error_404_layout"
+}
