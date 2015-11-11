@@ -96,44 +96,34 @@
       },
       "domEvents": [
         {
+          "on": "mouseover",
+          "selector": ".navigation-menu",
+          "flow": "showNavigationMenu"
+        },
+        {
+            "on": "mouseleave",
+            "selector": ".navigation-menu",
+            "flow": "hideNavigationMenu"
+        },
+        {
           "on": "click",
           "element": "admin-logo",
           "flow": "privateHome"
         },
         {
           "on": "click",
-          "element": "documentation",
-          "flow": "documentation"
+          "element": "money",
+          "flow": "money"
         },
         {
           "on": "click",
-          "element": "tutorials",
-          "flow": "support"
+          "element": "infrastructure",
+          "flow": "infrastructure"
         },
         {
           "on": "click",
-          "element": "contact",
-          "flow": "contact"
-        },
-        {
-          "on": "click",
-          "element": "about",
-          "flow": "about"
-        },
-        {
-          "on": "click",
-          "element": "blog",
-          "flow": "blog"
-        },
-        {
-          "on": "click",
-          "element": "terms",
-          "flow": "terms"
-        },
-        {
-          "on": "click",
-          "element": "privacy",
-          "flow": "privacy"
+          "element": "user-management",
+          "flow": "user-management"
         },
         {
           "on": "click",
@@ -154,44 +144,32 @@
     },
     "flow": [
       [
+          "showNavigationMenu",
+          [":state", "showNavigationMenu"]
+      ],
+      [
+          "hideNavigationMenu",
+          [":state", "hideNavigationMenu"]
+      ],
+      [
           "privateHome",
           [":private_router/route", "/"]
       ],
       [
-          "documentation",
-          [":private_router/route", "/documentation"]
+          "money",
+          [":private_router/route", "/money"],
+          [":state", "hideNavigationMenu"]
       ],
       [
-          "tutorials",
-          [":private_router/route", "/tutorials"]
+          "infrastructure",
+          [":private_router/route", "/infrastructure"],
+          [":state", "hideNavigationMenu"]
+
       ],
       [
-          "support",
-          [":private_router/route", "/support"]
-      ],
-      [
-          "contact",
-          [":private_router/route", "/contact"]
-      ],
-      [
-          "about",
-          [":private_router/route", "/about"]
-      ],
-      [
-          "blog",
-          [":private_router/route", "/blog"]
-      ],
-      [
-          "terms",
-          [":private_router/route", "/terms"]
-      ],
-      [
-          "privacy",
-          [":private_router/route", "/privacy"]
-      ],
-      [
-          "blog",
-          [":nav_main_private_layout/state", "toggleDirection"]
+          "user-management",
+          [":private_router/route", "/user-management"],
+          [":state", "hideNavigationMenu"]
       ],
       [
           "navSignout",

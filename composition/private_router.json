@@ -2,7 +2,7 @@
     "client": {
         "config": {
             "routes": [
-                "private_homepage",
+                "money",
                 {
                     "money": "money",
                     "infrastructure": "infrastructure",
@@ -27,7 +27,7 @@
                 [":nav_main_private_layout/state", "nav"]
             ],
             [
-                "private_homepage",
+                "money",
                 "money_layout/render",
                 ["flow", "add_active_class"]
             ],
