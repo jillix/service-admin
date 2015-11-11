@@ -29,18 +29,6 @@
           }
         ],
         ":private_router/route"
-      ],
-      [
-          "showFooter",
-          [
-              ":private_layout/state", "showFooter"
-          ]
-      ],
-      [
-          "hideFooter",
-          [
-              ":private_layout/state", "hideFooter"
-          ]
       ]
     ],
     "markup": [
