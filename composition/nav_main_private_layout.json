@@ -18,6 +18,17 @@
                   ]
               }
           ],
+          "activeDashboard": [
+              {
+                  "states": [
+                      "resetNav"
+                  ],
+                  "sel": ".active-visible .dashboard",
+                  "rm": [
+                      "hide"
+                  ]
+              }
+          ],
           "nav": [
               {
                   "states": [
@@ -127,6 +138,11 @@
         },
         {
           "on": "click",
+          "element": "dashboard",
+          "flow": "dashboard"
+        },
+        {
+          "on": "click",
           "element": "signout",
           "flow": "navSignout"
         },
@@ -169,6 +185,11 @@
       [
           "user-management",
           [":private_router/route", "/user-management"],
+          [":state", "hideNavigationMenu"]
+      ],
+      [
+          "dashboard",
+          [":private_router/route", "/dashboard"],
           [":state", "hideNavigationMenu"]
       ],
       [
