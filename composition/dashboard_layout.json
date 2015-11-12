@@ -5,13 +5,20 @@
       "templates": {
         "layout": {
           "to": ".pages-container",
-          "html": "/private/dashboard.html"
+          "html": "/private/dashboard.html",
+          "render": true
         }
       },
       "defaultTemplate": "layout"
     },
     "markup": [
       "/private/dashboard.html"
+    ],
+    "flow": [
+        [
+            "renderedDOM",
+            "nav_money_layout/render"
+        ]
     ]
   },
   "roles": {
