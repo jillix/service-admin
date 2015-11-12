@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "Users",
+      "templates": {
+        "layout": {
+          "to": ".pages-container",
+          "html": "/private/markup/user-management/user.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/private/user-management/users.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "users_layout"
+}
