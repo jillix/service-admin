@@ -15,7 +15,13 @@
                         }
                     ],
                     "infrastructure": "infrastructure",
-                    "user-management": "user-management",
+                    "user-management": [
+                        "user-management",
+                        {
+                            "users": "users",
+                            "organizations": "organizations"
+                        }
+                    ],
                     "dashboard": "dashboard"
                 }
             ],
@@ -69,6 +75,18 @@
                 "user_management_layout/render",
                 ["flow", "add_active_class"],
                 [":user_management_layout/state", "displayUsers"]
+            ],
+            [
+                "users",
+                "user_management_layout/render",
+                ["flow", "add_active_class"],
+                [":user_management_layout/state", "displayUsers"]
+            ],
+            [
+                "organizations",
+                "user_management_layout/render",
+                ["flow", "add_active_class"],
+                [":user_management_layout/state", "displayOrganizations"]
             ]
 
         ]
