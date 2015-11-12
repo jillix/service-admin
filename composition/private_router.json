@@ -39,8 +39,7 @@
             [
                 "homepage",
                 "dashboard_layout/render",
-                ["flow", "add_active_class"]
-
+                [":nav_main_private_layout/state", "activeDashboard"]
             ],
             [
                 "dashboard",
@@ -64,7 +63,6 @@
                 "infrastructure",
                 "infrastructure_layout/render",
                 ["flow", "add_active_class"]
-
             ],
             [
                 "user-management",
