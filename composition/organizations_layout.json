@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "Tutorials",
+      "templates": {
+        "layout": {
+          "to": ".pages-container",
+          "html": "/private/user-management/organizations.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/private/user-management/organizations.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "organizations_layout"
+}
