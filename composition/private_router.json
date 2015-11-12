@@ -66,8 +66,9 @@
             ],
             [
                 "user-management",
-                "user-management_layout/render",
-                ["flow", "add_active_class"]
+                "user_management_layout/render",
+                ["flow", "add_active_class"],
+                [":user_management_layout/state", "displayUsers"]
             ]
 
         ]
