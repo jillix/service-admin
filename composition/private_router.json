@@ -2,7 +2,7 @@
     "client": {
         "config": {
             "routes": [
-                "money",
+                "homepage",
                 {
                     "money": [
                         "money",
@@ -15,7 +15,8 @@
                         }
                     ],
                     "infrastructure": "infrastructure",
-                    "user-management": "user-management"
+                    "user-management": "user-management",
+                    "dashboard": "dashboard"
                 }
             ],
             "customData": {
@@ -34,6 +35,18 @@
                     }
                 ],
                 [":nav_main_private_layout/state", "nav"]
+            ],
+            [
+                "homepage",
+                "dashboard_layout/render",
+                ["flow", "add_active_class"]
+
+            ],
+            [
+                "dashboard",
+                "dashboard_layout/render",
+                ["flow", "add_active_class"]
+
             ],
             [
                 "money",
