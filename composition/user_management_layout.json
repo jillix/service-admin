@@ -1,0 +1,42 @@
+{
+  "client": {
+    "config": {
+      "title": "User management",
+      "templates": {
+        "layout": {
+          "to": ".pages-container",
+          "html": "/private/user-management/user_management.html"
+        }
+      },
+      "defaultTemplate": "layout",
+      "states": {
+          "displayUsers": [{
+              "sel": ".users",
+              "rm": ["hide"]
+          },
+          {
+              "sel": ".organizations",
+              "add": ["hide"]
+          }
+          ],
+          "displayOrganizations": [{
+              "sel": ".users",
+              "add": ["hide"]
+          },
+          {
+              "sel": ".organizations",
+              "rm": ["hide"]
+          }
+          ]
+      }
+    },
+    "markup": [
+      "/private/user-management/user_management.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "user_management_layout"
+}
