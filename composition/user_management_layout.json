@@ -5,7 +5,8 @@
       "templates": {
         "layout": {
           "to": ".pages-container",
-          "html": "/private/user-management/user_management.html"
+          "html": "/private/user-management/user_management.html",
+          "render": true
         }
       },
       "defaultTemplate": "layout",
@@ -32,6 +33,12 @@
     },
     "markup": [
       "/private/user-management/user_management.html"
+    ],
+    "flow": [
+        [
+            "renderedDOM",
+            "user_management_nav_layout/render"
+        ]
     ]
   },
   "roles": {
