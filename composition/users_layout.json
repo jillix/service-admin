@@ -5,13 +5,13 @@
       "templates": {
         "layout": {
           "to": ".users",
-          "html": "/private/user-management/list.html"
+          "html": "/private/user-management/list_users.html"
         }
       },
       "defaultTemplate": "layout"
     },
     "markup": [
-      "/private/user-management/list.html"
+      "/private/user-management/list_users.html"
     ]
   },
   "roles": {
