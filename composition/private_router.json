@@ -77,8 +77,8 @@
             ],
             [
                 "userOrOrganization",
-                "user_management_layout/render",
-                [":user_management_item_layout/state", "displayUsers"],
+                "user_management_item_layout/render",
+                [":user_management_layout/state", "displayItem"],
                 ["flow", "add_active_class"]
             ]
         ]
