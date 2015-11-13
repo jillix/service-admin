@@ -37,7 +37,9 @@
     "flow": [
         [
             "renderedDOM",
-            "user_management_nav_layout/render"
+            "user_management_nav_layout/render",
+            "users_layout/render",
+            "organizations_layout/render"
         ]
     ]
   },
