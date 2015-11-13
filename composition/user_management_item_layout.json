@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "Details",
+      "templates": {
+        "layout": {
+          "to": ".specific-item",
+          "html": "/private/user-management/specific_item.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/private/user-management/specific_item.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "user_management_item_layout"
+}
