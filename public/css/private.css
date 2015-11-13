@@ -773,7 +773,7 @@ span.tt-suggestions {
     display: block;
 }
 
-.money-nav ul, #settings-nav ul {
+.default-nav ul, .money-nav ul, #settings-nav ul {
     display: flex;
     font-size: 1.4em;
     color: white;
@@ -791,19 +791,19 @@ span.tt-suggestions {
     margin-right: 0;
 }
 
-.money-nav ul li, #settings-nav ul li {
+.default-nav ul li, .money-nav ul li, #settings-nav ul li {
     margin-top: 5px;
     margin-right: 4px;
     background: #9da3b9;
 }
 
-.money-nav a, #settings-nav a {
+.default-nav a, .money-nav a, #settings-nav a {
     color: white;
     padding: 3px 15px;
     display: block;
 }
 
-.money-nav ul .active, #settings-nav ul .active {
+.default-nav ul .active, .money-nav ul .active, #settings-nav ul .active {
     background: #4f5660;
 }
 
