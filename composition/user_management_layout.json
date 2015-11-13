@@ -11,23 +11,33 @@
       },
       "defaultTemplate": "layout",
       "states": {
-          "displayUsers": [{
-              "sel": ".users",
-              "rm": ["hide"]
-          },
-          {
-              "sel": ".organizations",
-              "add": ["hide"]
-          }
+
+          "resetContent": [
+              {
+                  "sel": ".user-management-content > div",
+                  "add": ["hide"]
+              }
           ],
-          "displayOrganizations": [{
-              "sel": ".users",
-              "add": ["hide"]
-          },
-          {
-              "sel": ".organizations",
-              "rm": ["hide"]
-          }
+          "displayUsers": [
+              {
+                  "states": ["resetContent"],
+                  "sel": ".users",
+                  "rm": ["hide"]
+              }
+          ],
+          "displayOrganizations": [
+              {
+                  "states": ["resetContent"],
+                  "sel": ".organizations",
+                  "rm": ["hide"]
+              }
+          ],
+          "displayItem": [
+              {
+                  "states": ["resetContent"],
+                  "sel": ".specific-item",
+                  "rm": ["hide"]
+              }
           ]
       }
     },
