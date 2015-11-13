@@ -4,14 +4,14 @@
       "title": "Users",
       "templates": {
         "layout": {
-          "to": ".pages-container",
-          "html": "/private/markup/user-management/user.html"
+          "to": ".users",
+          "html": "/private/user-management/list.html"
         }
       },
       "defaultTemplate": "layout"
     },
     "markup": [
-      "/private/user-management/users.html"
+      "/private/user-management/list.html"
     ]
   },
   "roles": {
