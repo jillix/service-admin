@@ -816,6 +816,7 @@ span.tt-suggestions {
 }
 
 .svg-apps, .svg-database, .svg-earth, .svg-account, .svg-directions, .svg-settings, .svg-signout {
+    background: url("/!/images/sprites/sprite-navigation.svg") 0 0 no-repeat;
     display: inline-block;
     vertical-align: top;
 }
