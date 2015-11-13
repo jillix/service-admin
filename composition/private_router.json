@@ -9,14 +9,14 @@
                         {
                             "invoices": "invoices",
                             "history": "history",
-                            "credit-cards": "credit-cards",
+                            "credit-cards": "creditCards",
                             "vouchers": "vouchers",
                             "earnings": "earnings"
                         }
                     ],
                     "infrastructure": "infrastructure",
                     "user-management": [
-                        "user-management",
+                        "userManagement",
                         {
                             ":item": "userOrOrganization"
                         }
@@ -70,7 +70,7 @@
                 ["flow", "add_active_class"]
             ],
             [
-                "user-management",
+                "userManagement",
                 "user_management_layout/render",
                 [":user_management_layout/state", "displayUsers"],
                 ["flow", "add_active_class"]
