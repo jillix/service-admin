@@ -18,8 +18,7 @@
                     "user-management": [
                         "user-management",
                         {
-                            "users": "users",
-                            "organizations": "organizations"
+                            ":item": "userOrOrganization"
                         }
                     ],
                     "dashboard": "dashboard"
@@ -77,18 +76,11 @@
                 ["flow", "add_active_class"]
             ],
             [
-                "users",
+                "userOrOrganization",
                 "user_management_layout/render",
-                [":user_management_layout/state", "displayUsers"],
-                ["flow", "add_active_class"]
-            ],
-            [
-                "organizations",
-                "user_management_layout/render",
-                [":user_management_layout/state", "displayOrganizations"],
+                [":user_management_item_layout/state", "displayUsers"],
                 ["flow", "add_active_class"]
             ]
-
         ]
     },
     "roles": {
