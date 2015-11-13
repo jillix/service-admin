@@ -1,10 +1,10 @@
 {
   "client": {
     "config": {
-      "title": "Tutorials",
+      "title": "Organizations",
       "templates": {
         "layout": {
-          "to": ".pages-container",
+          "to": ".organizations",
           "html": "/private/user-management/organizations.html"
         }
       },
