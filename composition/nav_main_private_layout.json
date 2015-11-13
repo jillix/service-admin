@@ -18,22 +18,22 @@
                   ]
               }
           ],
+          "nav": [
+              {
+                  "states": [
+                      "resetNav"
+                  ],
+                  "rm": [
+                      "hide"
+                  ]
+              }
+          ],
           "activeDashboard": [
               {
                   "states": [
                       "resetNav"
                   ],
                   "sel": ".active-visible .dashboard",
-                  "rm": [
-                      "hide"
-                  ]
-              }
-          ],
-          "nav": [
-              {
-                  "states": [
-                      "resetNav"
-                  ],
                   "rm": [
                       "hide"
                   ]
