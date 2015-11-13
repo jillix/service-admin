@@ -8,10 +8,32 @@
           "html": "/private/user-management/nav_user_management.html"
         }
       },
-      "defaultTemplate": "layout"
+      "defaultTemplate": "layout",
+      "domEvents": [
+          {
+              "on": "click",
+              "element": "users",
+              "flow": "showUsers"
+          },
+          {
+              "on": "click",
+              "element": "organizations",
+              "flow": "showOrganizations"
+          }
+      ]
     },
     "markup": [
       "/private/user-management/nav_user_management.html"
+    ],
+    "flow": [
+        [
+            "showUsers",
+            [":user_management_layout/state", "displayUsers"]
+        ],
+        [
+            "showOrganizations",
+            [":user_management_layout/state", "displayOrganizations"]
+        ]
     ]
   },
   "roles": {
