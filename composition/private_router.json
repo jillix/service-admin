@@ -73,20 +73,20 @@
             [
                 "user-management",
                 "user_management_layout/render",
-                ["flow", "add_active_class"],
-                [":user_management_layout/state", "displayUsers"]
+                [":user_management_layout/state", "displayUsers"],
+                ["flow", "add_active_class"]
             ],
             [
                 "users",
                 "user_management_layout/render",
-                ["flow", "add_active_class"],
-                [":user_management_layout/state", "displayUsers"]
+                [":user_management_layout/state", "displayUsers"],
+                ["flow", "add_active_class"]
             ],
             [
                 "organizations",
                 "user_management_layout/render",
-                ["flow", "add_active_class"],
-                [":user_management_layout/state", "displayOrganizations"]
+                [":user_management_layout/state", "displayOrganizations"],
+                ["flow", "add_active_class"]
             ]
 
         ]
