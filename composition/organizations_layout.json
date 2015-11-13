@@ -5,13 +5,13 @@
       "templates": {
         "layout": {
           "to": ".organizations",
-          "html": "/private/user-management/organizations.html"
+          "html": "/private/user-management/list_organizations.html"
         }
       },
       "defaultTemplate": "layout"
     },
     "markup": [
-      "/private/user-management/organizations.html"
+      "/private/user-management/list_organizations.html"
     ]
   },
   "roles": {
