@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "Management",
+      "templates": {
+        "layout": {
+          "to": ".user-management-nav ul",
+          "html": "/private/user-management/nav_user_management.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/private/user-management/nav_user_management.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "user_management_nav_layout"
+}
