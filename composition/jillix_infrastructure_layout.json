@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "Jillix Infrastructure",
+      "templates": {
+        "layout": {
+          "to": ".jillix-infrastructure",
+          "html": "/private/infrastructure/jillix_infrastructure_list.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/private/infrastructure/jillix_infrastructure_list.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "jillix_infrastructure_layout"
+}
