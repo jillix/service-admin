@@ -1,0 +1,54 @@
+{
+  "client": {
+    "config": {
+      "title": "Infrastructure",
+      "templates": {
+        "layout": {
+          "to": ".infrastructure-nav ul",
+          "html": "/private/infrastructure/nav_infrastructure.html"
+        }
+      },
+      "defaultTemplate": "layout",
+      "domEvents": [
+          {
+              "on": "click",
+              "element": "versions",
+              "flow": "showVersions"
+          },
+          {
+              "on": "click",
+              "element": "gcp",
+              "flow": "showGcp"
+          },
+          {
+              "on": "click",
+              "element": "infrastructure",
+              "flow": "showInfrastructure"
+          }
+      ]
+    },
+    "markup": [
+      "/private/infrastructure/nav_infrastructure.html"
+    ],
+    "flow": [
+        [
+            "showVersions",
+            [":user_management_layout/state", "displayVersionManagement"]
+        ],
+        [
+            "showGcp",
+            [":user_management_layout/state", "displayGcpInfrastructure"]
+        ],
+        [
+            "showInfrastructure",
+            [":user_management_layout/state", "displayJillixInfrastructure"]
+        ]
+    ]
+
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "infrastructure_nav_layout"
+}
