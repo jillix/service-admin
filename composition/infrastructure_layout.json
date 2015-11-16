@@ -5,13 +5,53 @@
       "templates": {
         "layout": {
           "to": ".pages-container",
-          "html": "/private/infrastructure.html"
+          "html": "/private/infrastructure/infrastructure.html",
+          "render": true
         }
       },
-      "defaultTemplate": "layout"
+      "defaultTemplate": "layout",
+      "states": {
+
+          "resetContent": [
+              {
+                  "sel": ".infrastructure-content > div",
+                  "add": ["hide"]
+              }
+          ],
+          "displayVersionManagement": [
+              {
+                  "states": ["resetContent"],
+                  "sel": ".version-management",
+                  "rm": ["hide"]
+              }
+          ],
+          "displayGcpInfrastructure": [
+              {
+                  "states": ["resetContent"],
+                  "sel": ".gcp-infrastructure",
+                  "rm": ["hide"]
+              }
+          ],
+          "displayJillixInfrastructure": [
+              {
+                  "states": ["resetContent"],
+                  "sel": ".jillix-infrastructure",
+                  "rm": ["hide"]
+              }
+          ]
+      }
     },
     "markup": [
-      "/private/infrastructure.html"
+      "/private/infrastructure/infrastructure.html"
+    ],
+    "flow": [
+        [
+            "renderedDOM",
+            "infrastructure_nav_layout/render",
+            "version_management_layout/render",
+            "gcp_infrastructure_layout/render",
+            "jillix_infrastructure/render"
+        ]
     ]
   },
   "roles": {
