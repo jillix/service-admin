@@ -33,14 +33,14 @@
     "flow": [
         [
             "showVersions",
-            [":user_management_layout/state", "displayVersionManagement"]
+            [":infrastructure_layout/state", "displayVersionManagement"]
         ],
         [
             "showGcp",
-            [":user_management_layout/state", "displayGcpInfrastructure"]
+            [":infrastructure_layout/state", "displayGcpInfrastructure"]
         ],
         [
-            "showInfrastructure",
+            ":infrastructure_layout",
             [":user_management_layout/state", "displayJillixInfrastructure"]
         ]
     ]
