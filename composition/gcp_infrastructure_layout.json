@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "Infrastructure",
+      "templates": {
+        "layout": {
+          "to": ".gcp-infrastructure",
+          "html": "/private/infrastructure/infrastructure_list.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/private/infrastructure/infrastructure_list.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "gcp_infrastructure_layout"
+}
