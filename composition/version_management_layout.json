@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "Versions",
+      "templates": {
+        "layout": {
+          "to": ".version-management",
+          "html": "/private/infrastructure/versions_list.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/private/infrastructure/versions_list.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "version_management_layout"
+}
