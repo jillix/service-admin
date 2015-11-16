@@ -50,7 +50,7 @@
             "infrastructure_nav_layout/render",
             "version_management_layout/render",
             "gcp_infrastructure_layout/render",
-            "jillix_infrastructure/render"
+            "jillix_infrastructure_layout/render"
         ]
     ]
   },
