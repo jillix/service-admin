@@ -40,8 +40,8 @@
             [":infrastructure_layout/state", "displayGcpInfrastructure"]
         ],
         [
-            ":infrastructure_layout",
-            [":user_management_layout/state", "displayJillixInfrastructure"]
+            ":showInfrastructure",
+            [":infrastructure_layout/state", "displayJillixInfrastructure"]
         ]
     ]
 
