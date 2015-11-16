@@ -14,7 +14,14 @@
                             "earnings": "earnings"
                         }
                     ],
-                    "infrastructure": "infrastructure",
+                    "infrastructure": [
+                        "infrastructure",
+                            {
+                                "version-management": "infrastructure",
+                                "gcp-infrastructure": "gcp-infrastructure",
+                                "jillix-infrastructure": "jillix-infrastructure"
+                            }
+                    ],
                     "user-management": [
                         "userManagement",
                         {
@@ -67,6 +74,19 @@
             [
                 "infrastructure",
                 "infrastructure_layout/render",
+                [":infrastructure_layout/state", "displayVersionManagement"],
+                ["flow", "add_active_class"]
+            ],
+            [
+                "gcp-infrastructure",
+                "infrastructure_layout/render",
+                [":infrastructure_layout/state", "displayGcpInfrastructure"],
+                ["flow", "add_active_class"]
+            ],
+            [
+                "jillix-infrastructure",
+                "infrastructure_layout/render",
+                [":infrastructure_layout/state", "displayJillixInfrastructure"],
                 ["flow", "add_active_class"]
             ],
             [
