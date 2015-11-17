@@ -8,10 +8,35 @@
           "html": "/private/infrastructure/infrastructure_list.html"
         }
       },
-      "defaultTemplate": "layout"
+      "defaultTemplate": "layout",
+      "states": {
+          "toggleAdvOptions": [
+              {
+                  "sel": ".option span",
+                  "toggle": ["hide"]
+              },
+              {
+                  "sel": ".adv-container",
+                  "toggle": ["hide"]
+              }
+          ]
+      },
+      "domEvents": [
+          {
+              "on": "click",
+              "selector": ".option",
+              "flow": "toggleArrow"
+          }
+      ]
     },
     "markup": [
       "/private/infrastructure/infrastructure_list.html"
+    ],
+    "flow": [
+      [
+          "toggleArrow",
+          [":state", "toggleAdvOptions"]
+      ]
     ]
   },
   "roles": {
