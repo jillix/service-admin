@@ -21,7 +21,8 @@
     "styles": [
         "/css/flexboxgrid.css",
         "/css/style.css",
-        "/css/private.css"
+        "/css/private.css",
+        "/css/octicons/octicons.css"
     ]
   },
   "roles": {
