@@ -38,6 +38,13 @@
                   "sel": ".jillix-infrastructure",
                   "rm": ["hide"]
               }
+         ],
+          "displayNewEngineVersion": [
+              {
+                  "states": ["resetContent"],
+                  "sel": ".new-engine-version",
+                  "rm": ["hide"]
+              }
           ]
       }
     },
@@ -50,6 +57,7 @@
             "infrastructure_nav_layout/render",
             "version_management_layout/render",
             "gcp_infrastructure_layout/render",
+            "new_engine_version_layout/render",
             "jillix_infrastructure_layout/render"
         ]
     ]
