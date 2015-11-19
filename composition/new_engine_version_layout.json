@@ -1,0 +1,22 @@
+{
+  "client": {
+    "config": {
+      "title": "New Engine Version",
+      "templates": {
+        "layout": {
+          "to": ".new-engine-version",
+          "html": "/private/infrastructure/new_engine_version.html"
+        }
+      },
+      "defaultTemplate": "layout"
+    },
+    "markup": [
+      "/private/infrastructure/new_engine_version.html"
+    ]
+  },
+  "roles": {
+    "*": true
+  },
+  "module": "view",
+  "name": "new_engine_version_layout"
+}
