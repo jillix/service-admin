@@ -84,8 +84,8 @@
             ],
             [
                 "newEngineVersion",
-                "new_engine_version_layout/render",
-                [":infrastructure_layout/state", "displayVersionManagement"],
+                "infrastructure_layout/render",
+                [":infrastructure_layout/state", "displayNewEngineVersion"],
                 ["flow", "add_active_class"]
             ],
             [
