@@ -17,7 +17,12 @@
                     "infrastructure": [
                         "infrastructure",
                             {
-                                "version-management": "infrastructure",
+                                "version-management": [
+                                    "infrastructure",
+                                    {
+                                        "new-version": "newEngineVersion"
+                                    }
+                                ],
                                 "gcp-infrastructure": "gcp-infrastructure",
                                 "jillix-infrastructure": "jillix-infrastructure"
                             }
@@ -74,6 +79,12 @@
             [
                 "infrastructure",
                 "infrastructure_layout/render",
+                [":infrastructure_layout/state", "displayVersionManagement"],
+                ["flow", "add_active_class"]
+            ],
+            [
+                "newEngineVersion",
+                "new_engine_version_layout/render",
                 [":infrastructure_layout/state", "displayVersionManagement"],
                 ["flow", "add_active_class"]
             ],
